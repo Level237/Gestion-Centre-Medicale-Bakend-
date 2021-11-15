@@ -15,6 +15,8 @@ class CreateOrdonancesTable extends Migration
     {
         Schema::create('ordonances', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('result');
             $table->timestamps();
         });
     }

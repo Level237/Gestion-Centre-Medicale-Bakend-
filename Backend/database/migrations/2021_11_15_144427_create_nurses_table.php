@@ -15,6 +15,9 @@ class CreateNursesTable extends Migration
     {
         Schema::create('nurses', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->enum('type',['accueil','caisse']);
             $table->timestamps();
         });
     }
