@@ -1,0 +1,676 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Dashboard</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/patient/dashboard">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active">Patient Dashboard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Widgets -->
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="body">
+            <div class="row align-items-center">
+              <div class="col-md-4">
+                <img src="assets/images/pages/welcome.png" alt="" class="w-100">
+              </div>
+              <div class="col-md-8">
+                <h4 class="font-20 weight-500 mb-2">
+                  Welcome back <div class="weight-600 font-30 col-blue pt-1">Sarah Smith!</div>
+                </h4>
+                <p class="font-18 max-width-600">We would like to take this opportunity to welcome you to our practice
+                  and to thank you
+                  for choosing our physicians to participate in your healthcare. We look forward to
+                  providing you with personalized, comprehensive health care focusing on wellness and
+                  prevention.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #END# Widgets -->
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="clearfix">
+            <div class="card-icon-only shadow-primary float-start">
+              <img src="assets/images/pages/blood-pressure.png" alt="">
+            </div>
+            <div class="card-right">
+              <div>
+                <h5 class="float-end">Blood Pressure</h5>
+              </div>
+              <div class="col-green">
+                <h3 class="font-weight-bold float-end mb-0"> 110/70</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-content msl-4 mb-3">
+            <p class="m-b-0 d-flex"><i class="material-icons col-green pr-2">trending_up</i> 10% Higher Then Last Month
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="clearfix">
+            <div class="card-icon-only shadow-primary float-start">
+              <img src="assets/images/pages/heart-rate.png" alt="">
+            </div>
+            <div class="card-right">
+              <div>
+                <h5 class="float-end">Blood Pressure</h5>
+              </div>
+              <div class="col-green">
+                <h3 class="font-weight-bold float-end mb-0">650</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-content msl-4 mb-3">
+            <p class="m-b-0 d-flex"><i class="material-icons col-orange pr-2">trending_down</i> 07% Less Then Last Month
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="clearfix">
+            <div class="card-icon-only shadow-primary float-start">
+              <img src="assets/images/pages/glucose.png" alt="">
+            </div>
+            <div class="card-right">
+              <div>
+                <h5 class="float-end">Glucose Level</h5>
+              </div>
+              <div class="col-green">
+                <h3 class="font-weight-bold float-end mb-0">88-75</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-content msl-4 mb-3">
+            <p class="m-b-0 d-flex"><i class="material-icons col-green pr-2">trending_up</i> 12% Higher Then Last Month
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12">
+        <div class="card card-statistic-2">
+          <div class="clearfix">
+            <div class="card-icon-only shadow-primary float-start">
+              <img src="assets/images/pages/blood-count.png" alt="">
+            </div>
+            <div class="card-right">
+              <div>
+                <h5 class="float-end">Blood Count</h5>
+              </div>
+              <div class="col-green">
+                <h3 class="font-weight-bold float-end mb-0">9,456/mL</h3>
+              </div>
+            </div>
+          </div>
+          <div class="card-content msl-4 mb-3">
+            <p class="m-b-0 d-flex"><i class="material-icons col-orange pr-2">trending_down</i> 22% Less Then Last Month
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="float-start">
+              <h6 class="text-muted">Resting Heart Rate</h6>
+              <h5>72 bmp <span class="text-muted font-12">(Average)</span></h5>
+            </div>
+            <div class="mb-5">
+              <apx-chart [series]="restRateChartOptions.series" [chart]="restRateChartOptions.chart"
+                [xaxis]="restRateChartOptions.xaxis" [stroke]="restRateChartOptions.stroke"
+                [colors]="restRateChartOptions.colors" [dataLabels]="restRateChartOptions.dataLabels"
+                [legend]="restRateChartOptions.legend" [markers]="restRateChartOptions.markers"
+                [grid]="restRateChartOptions.grid" [yaxis]="restRateChartOptions.yaxis"
+                [tooltip]="restRateChartOptions.tooltip" [title]="restRateChartOptions.title"></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="float-start">
+              <h6 class="text-muted">Performance Heart Rate</h6>
+              <h5>129 bmp <span class="text-muted font-12">(Average)</span></h5>
+            </div>
+            <div class="mb-5">
+              <apx-chart [series]="performanceRateChartOptions.series" [chart]="performanceRateChartOptions.chart"
+                [xaxis]="performanceRateChartOptions.xaxis" [stroke]="performanceRateChartOptions.stroke"
+                [colors]="performanceRateChartOptions.colors" [dataLabels]="performanceRateChartOptions.dataLabels"
+                [legend]="performanceRateChartOptions.legend" [markers]="performanceRateChartOptions.markers"
+                [grid]="performanceRateChartOptions.grid" [yaxis]="performanceRateChartOptions.yaxis"
+                [tooltip]="performanceRateChartOptions.tooltip" [title]="performanceRateChartOptions.title"></apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Medications</h2>
+          </div>
+          <div class="body">
+            <div class="table-responsive">
+              <table class="table table-borderless medicine-list">
+                <tr>
+                  <td><i class="fas fa-tablets pill-style"></i> Econochlor (chloramphenicol-oral)</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">1 - 0 - 1</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-capsules pill-style"></i> Desmopressin tabs</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">1 - 1 - 1</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-syringe pill-style"></i> Abciximab-injection</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">1 Daily</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-pills pill-style"></i> Kevzara sarilumab</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">0 - 0 - 1</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-capsules pill-style"></i> Gentamicin-topical</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">1 - 0 - 1</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-tablets pill-style"></i> Paliperidone palmitate</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">1 - 1 - 1</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-syringe pill-style"></i> Sermorelin-injectable</td>
+                  <td class="text-end w-25">
+                    <span class="badge-outline">1 Daily</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="text-center p-t-20">
+              <button mat-stroked-button color="primary">Report Adverse Effect</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="card">
+          <div class="body">
+            <mat-tab-group dynamicHeight>
+              <mat-tab label="Upcoming Appointment">
+                <ul class="list-unstyled list-unstyled-border list-unstyled-noborder">
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig1.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Cara Stevens</div>
+                      <div class="text-job text-muted mb-0">Radiologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">09:00-10:00</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">CT scans</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 676545655</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig2.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.John Doe</div>
+                      <div class="text-job text-muted mb-0">Cardiologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">13 June '20</div>
+                      <div class="text-job text-muted mb-0">11:00-11:30</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">heart checkup</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 434656764</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig3.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Airi Satou</div>
+                      <div class="text-job text-muted mb-0">Otolaryngologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">09:15-10:15 </div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Diseases Of The Ear</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 45345673</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig4.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Angelica Ramos</div>
+                      <div class="text-job text-muted mb-0">Dentist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">11:00-12:00</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Root Canal</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 87654533</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig6.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Jens Brincker</div>
+                      <div class="text-job text-muted mb-0">Endocrinologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">23 June '20</div>
+                      <div class="text-job text-muted mb-0">04:00-05:00</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Diabetes</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 45678345</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig7.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Airi Satou</div>
+                      <div class="text-job text-muted mb-0">Otolaryngologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">09:15-10:15 </div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Diseases Of The Ear</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 45345673</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                </ul>
+              </mat-tab>
+              <mat-tab label="Past Appointment">
+                <ul class="list-unstyled user-progress list-unstyled-border list-unstyled-noborder">
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig7.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Jens Brincker</div>
+                      <div class="text-job text-muted mb-0">Endocrinologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">23 June '20</div>
+                      <div class="text-job text-muted mb-0">04:00-05:00</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Diabetes</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 45678345</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig6.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.John Doe</div>
+                      <div class="text-job text-muted mb-0">Cardiologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">13 June '20</div>
+                      <div class="text-job text-muted mb-0">11:00-11:30</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">heart checkup</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 434656764</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig8.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Cara Stevens</div>
+                      <div class="text-job text-muted mb-0">Radiologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">09:00-10:00</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">CT scans</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 676545655</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig9.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Airi Satou</div>
+                      <div class="text-job text-muted mb-0">Otolaryngologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">09:15-10:15 </div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Diseases Of The Ear</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 45345673</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig5.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.Angelica Ramos</div>
+                      <div class="text-job text-muted mb-0">Dentist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">12 June '20</div>
+                      <div class="text-job text-muted mb-0">11:00-12:00</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">Root Canal</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 87654533</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                  <li class="app-list">
+                    <img alt="image" class="rounded-circle" width="40" src="assets/images/user/usrbig10.jpg">
+                    <div class="set-flex">
+                      <div class="media-title font-16">Dr.John Doe</div>
+                      <div class="text-job text-muted mb-0">Cardiologist</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title font-16">13 June '20</div>
+                      <div class="text-job text-muted mb-0">11:00-11:30</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Treatement</div>
+                      <div class="text-job font-16">heart checkup</div>
+                    </div>
+                    <div class="set-flex">
+                      <div class="media-title text-muted mb-0">Contact Number</div>
+                      <div class="text-job font-16">+123 434656764</div>
+                    </div>
+                    <div class="media-cta">
+                      <td>
+                        <button mat-icon-button class="btn-tbl-confirm">
+                          <mat-icon>done</mat-icon>
+                        </button>
+                        <button mat-icon-button class="btn-tbl-reject">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                      </td>
+                    </div>
+                  </li>
+                </ul>
+              </mat-tab>
+            </mat-tab-group>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Reports/Documents</h2>
+          </div>
+          <div class="body">
+            <ul class="list-unstyled list-unstyled-border list-unstyled-noborder">
+              <li class="report-list">
+                <div class="d-flex">
+                  <i class="far fa-file-pdf file-style col-red font-20"></i>
+                  <div class="media-title font-16">Blood Report</div>
+                </div>
+                <div class="ms-auto">
+                  <td>
+                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                  </td>
+                </div>
+              </li>
+              <li class="report-list">
+                <div class="d-flex">
+                  <i class="far fa-file-word col-blue font-20 file-style"></i>
+                  <div class="media-title font-16">Mediclaim Documents</div>
+                </div>
+                <div class="ms-auto">
+                  <td>
+                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                  </td>
+                </div>
+              </li>
+              <li class="report-list">
+                <div class="d-flex">
+                  <i class="far fa-file-alt col-black font-20 file-style"></i>
+                  <div class="media-title font-16">Doctor Prescription</div>
+                </div>
+                <div class="ms-auto">
+                  <td>
+                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                  </td>
+                </div>
+              </li>
+              <li class="report-list">
+                <div class="d-flex">
+                  <i class="far fa-file-archive col-purple font-20 file-style"></i>
+                  <div class="media-title font-16">X-Ray Files</div>
+                </div>
+                <div class="ms-auto">
+                  <td>
+                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                  </td>
+                </div>
+              </li>
+              <li class="report-list">
+                <div class="d-flex">
+                  <i class="far fa-file-pdf col-red font-20 file-style"></i>
+                  <div class="media-title font-16">Urine Report</div>
+                </div>
+                <div class="ms-auto">
+                  <td>
+                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                  </td>
+                </div>
+              </li>
+              <li class="report-list">
+                <div class="d-flex">
+                  <i class="far fa-file-image col-teal font-20 file-style"></i>
+                  <div class="media-title font-16">Scanned Documents</div>
+                </div>
+                <div class="ms-auto">
+                  <td>
+                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-arrow-alt-circle-down"></i>
+                  </td>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

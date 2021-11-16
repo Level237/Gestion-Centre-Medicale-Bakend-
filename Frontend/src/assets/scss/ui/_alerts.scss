@@ -1,0 +1,42 @@
+﻿/*
+ *  Document   : alert.scss
+ *  Author     : RedStar Template
+ *  Description: This scss file for alert style classes
+ */
+.alert {
+  @include border-radius(0);
+  @include box-shadow(none);
+  border: none;
+  color: #fff !important;
+
+  .alert-link {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
+.alert-success {
+  background-color: rgba(24, 206, 15, 0.8);
+}
+
+.alert-info {
+  background-color: rgba(44, 168, 255, 0.8);
+}
+
+.alert-warning {
+  background-color: rgba(255, 178, 54, 0.8);
+}
+
+.alert-danger {
+  background-color: rgba(255, 54, 54, 0.8);
+}
+
+.alert-dismissible {
+  .close {
+    color: #fff;
+    opacity: 1;
+    border: none;
+    text-shadow: none;
+  }
+}

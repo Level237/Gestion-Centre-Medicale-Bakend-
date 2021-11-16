@@ -1,0 +1,115 @@
+<nav #navbar class="navbar active">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" onClick="return false;" class="navbar-toggle collapsed"
+        (click)="isNavbarCollapsed = !isNavbarCollapsed" aria-expanded="false"></a>
+      <a href="#" onClick="return false;" class="bars" (click)="mobileMenuSidebarOpen($event,'overlay-open')"></a>
+      <a class="navbar-brand" routerLink={{homePage}}>
+        <img src="assets/images/logo.png" alt="" />
+        <span class="logo-name">Cliniva</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" [ngbCollapse]="isNavbarCollapsed">
+      <ul class="float-start collapse-menu-icon">
+        <li>
+          <button mat-icon-button (click)="callSidemenuCollapse()" class="sidemenu-collapse">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Full Screen Button -->
+        <li class="fullscreen">
+          <button mat-icon-button (click)="callFullscreen()" class=" nav-notification-icons">
+            <mat-icon>fullscreen</mat-icon>
+          </button>
+        </li>
+        <!-- #END# Full Screen Button -->
+        <li class="nav-item" ngbDropdown>
+          <a ngbDropdownToggle class="lang-dropdown">
+            <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" height="16">
+            <img *ngIf="flagvalue === undefined" src="{{defaultFlag}}" height="16">
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu lang-item dropdown-menu-right pullDown">
+            <a href="javascript:void(0);" class="dropdown-item lang-item-list" *ngFor="let item of listLang"
+              (click)="setLanguage(item.text, item.lang, item.flag)"
+              [ngClass]="{'active': langStoreValue === item.lang}">
+              <img src="{{item.flag}}" class="flag-img" height="12"> <span class="align-middle">{{item.text}}</span>
+            </a>
+          </div>
+        </li>
+        <!-- #START# Notifications-->
+        <li class="nav-item" ngbDropdown>
+          <button mat-icon-button ngbDropdownToggle class="nav-notification-icons">
+            <mat-icon>notifications_none</mat-icon>
+            <span class="label-count bg-orange"></span>
+          </button>
+          <div ngbDropdownMenu class="notification-dropdown pullDown">
+            <div class="noti-list" style="position: relative; max-width: 600px; max-height: 250px;" [perfectScrollbar]>
+              <ul class="menu">
+                <li>
+                  <a href="#" *ngFor="let notification of notifications" onClick="return false;">
+                    <span class="table-img msg-user">
+                      <img src="{{notification.userImg}}" alt="">
+                    </span>
+                    <span class="menu-info">
+                      <span class="menu-title">{{notification.userName}}</span>
+                      <span class="menu-desc">
+                        <i class="material-icons">access_time</i> {{notification.time}}
+                      </span>
+                      <span class="menu-desc">{{notification.message}}</span>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a class="text-center d-block border-top py-1">Read
+              All Notifications</a>
+          </div>
+        </li>
+        <!-- #END# Notifications-->
+        <li class="nav-item user_profile" ngbDropdown>
+          <a href="#" onClick="return false;" ngbDropdownToggle role="button" class="nav-notification-icons pt-0">
+            <img src={{userImg}} class="rounded-circle" width="32" height="32" alt="User">
+          </a>
+          <div ngbDropdownMenu class="notification-dropdown pullDown">
+            <div class="noti-list" style="position: relative; max-width: 600px; max-height: 300px;" [perfectScrollbar]>
+              <ul class="menu">
+                <li class="body">
+                  <ul class="user_dw_menu">
+                    <li>
+                      <a href="#" onClick="return false;">
+                        <mat-icon aria-hidden="false" class="me-2">person</mat-icon>Profile
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" onClick="return false;">
+                        <mat-icon aria-hidden="false" class="me-2">feedback</mat-icon>Feedback
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" onClick="return false;">
+                        <mat-icon aria-hidden="false" class="me-2">help</mat-icon>Help
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);" (click)="logout()">
+                        <mat-icon aria-hidden="false" class="me-2">power_settings_new</mat-icon>Logout
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- #END# Tasks -->
+        <li class="float-end">
+          <button mat-icon-button (click)="toggleRightSidebar()" class="nav-notification-icons js-right-sidebar">
+            <mat-icon id="settingBtn">settings</mat-icon>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

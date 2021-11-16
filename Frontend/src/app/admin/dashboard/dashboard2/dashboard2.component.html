@@ -1,0 +1,638 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Dashboard 2</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active">Dashboard 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <!-- Bar chart with line -->
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2><strong>Doctor</strong> Performance</h2>
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <apx-chart [series]="lineChartOptions.series" [chart]="lineChartOptions.chart"
+                [xaxis]="lineChartOptions.xaxis" [stroke]="lineChartOptions.stroke" [colors]="lineChartOptions.colors"
+                [dataLabels]="lineChartOptions.dataLabels" [legend]="lineChartOptions.legend"
+                [tooltip]="lineChartOptions.tooltip" [markers]="lineChartOptions.markers" [grid]="lineChartOptions.grid"
+                [yaxis]="lineChartOptions.yaxis" [title]="lineChartOptions.title" [fill]="lineChartOptions.fill">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- line chart -->
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="plain-card">
+          <div class="card-inner">
+            <h6 class="tx-primary m-b-10">Patient Report</h6>
+            <div class="row">
+              <div class="col-4">
+                <label class="font-14">Today</label>
+                <p>105</p>
+              </div>
+              <div class="col-4">
+                <label class="font-14">This Week</label>
+                <p>825</p>
+              </div>
+              <div class="col-4">
+                <label class="font-14">This Month</label>
+                <p>22,067</p>
+              </div>
+            </div>
+            <div class="progress shadow-style">
+              <div class="progress-bar l-bg-orange width-per-74" role="progressbar" aria-valuenow="74" aria-valuemin="0"
+                aria-valuemax="100">74%</div>
+            </div>
+          </div>
+        </div>
+        <div class="plain-card">
+          <div class="card-inner">
+            <h6 class="tx-primary m-b-10">Income Report</h6>
+            <div class="row">
+              <div class="col-4">
+                <label class="font-14">Today</label>
+                <p>$1,247</p>
+              </div>
+              <div class="col-4">
+                <label class="font-14">This Week</label>
+                <p>$22,568</p>
+              </div>
+              <div class="col-4">
+                <label class="font-14">This Month</label>
+                <p>$65,147</p>
+              </div>
+            </div>
+            <div class="progress shadow-style">
+              <div class="progress-bar l-bg-red width-per-70" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                aria-valuemax="100">70%</div>
+            </div>
+          </div>
+        </div>
+        <div class="plain-card">
+          <div class="card-inner">
+            <h6 class="tx-primary m-b-10">Expense Report</h6>
+            <div class="row">
+              <div class="col-4">
+                <label class="font-14">Today</label>
+                <p>$723</p>
+              </div>
+              <div class="col-4">
+                <label class="font-14">This Week</label>
+                <p>$12,451</p>
+              </div>
+              <div class="col-4">
+                <label class="font-14">This Month</label>
+                <p>$35,589</p>
+              </div>
+            </div>
+            <div class="progress shadow-style">
+              <div class="progress-bar l-bg-cyan width-per-55" role="progressbar" aria-valuenow="55" aria-valuemin="0"
+                aria-valuemax="100">55%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Recent</strong> Report</h2>
+            <button mat-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Action</button>
+              <button mat-menu-item>Another action</button>
+              <button mat-menu-item>Something else here</button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <div class="row">
+              <div class="col-md-12 col-xl-4 d-flex flex-column justify-content-center">
+                <div class="ml-xl-3 m-b-20">
+                  <h2>$1,17,289</h2>
+                  <h4 class="font-weight-light col-green">Total Income</h4>
+                  <p class="mb-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor.
+                  </p>
+                </div>
+                <div class="ml-xl-3">
+                  <h2>$1,17,289</h2>
+                  <h4 class="font-weight-light col-orange">Total Expense</h4>
+                  <p class="mb-2"> Cras dapibus. Vivamus elementum semper nisi. Aenean
+                    vulputate eleifend tellus.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-12 col-xl-8">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h5 class="tx-primary m-b-30">Country Wise Patients</h5>
+                    <div class="progress-list m-b-10">
+                      <div class="details">
+                        <div class="title">USA</div>
+                      </div>
+                      <div class="status">
+                        <span>40</span>% </div>
+                      <div class="progress-xs not-rounded progress">
+                        <div class="progress-bar progress-bar-warning width-per-40" role="progressbar"
+                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="progress-list m-b-10">
+                      <div class="details">
+                        <div class="title">Germany</div>
+                      </div>
+                      <div class="status">
+                        <span>49</span>% </div>
+                      <div class="progress-xs not-rounded progress">
+                        <div class="progress-bar progress-bar-danger width-per-49" role="progressbar" aria-valuenow="49"
+                          aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">49%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="progress-list m-b-10">
+                      <div class="details">
+                        <div class="title">France</div>
+                      </div>
+                      <div class="status">
+                        <span>65</span>% </div>
+                      <div class="progress-xs not-rounded progress">
+                        <div class="progress-bar progress-bar-blue width-per-65" role="progressbar" aria-valuenow="65"
+                          aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">65%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="progress-list m-b-10">
+                      <div class="details">
+                        <div class="title">India</div>
+                      </div>
+                      <div class="status">
+                        <span>28</span>% </div>
+                      <div class="progress-xs not-rounded progress">
+                        <div class="progress-bar progress-bar-success width-per-28" role="progressbar"
+                          aria-valuenow="28" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">28%</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="progress-list m-b-10">
+                      <div class="details">
+                        <div class="title">Other</div>
+                      </div>
+                      <div class="status">
+                        <span>16</span>% </div>
+                      <div class="progress-xs not-rounded progress">
+                        <div class="progress-bar progress-bar-hotpink width-per-16" role="progressbar"
+                          aria-valuenow="16" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">16%</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <!-- chart -->
+                    <div class="recent-report__chart">
+                      <canvas baseChart class="chart" [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                        [options]="doughnutChartOptions" [legend]="doughnutChartLegend" [chartType]="doughnutChartType"
+                        [colors]="doughnutChartColors"></canvas>
+                    </div>
+                    <div class="country-chart">
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-green"></span>
+                          <span>Itely</span>
+                        </div>
+                        <p class="mb-0">$30,289</p>
+                      </div>
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-orange"></span>
+                          <span>USA</span>
+                        </div>
+                        <p class="mb-0">$25,968</p>
+                      </div>
+                      <div class="d-flex justify-content-between mx-xl-5 mt-3">
+                        <div class="chart-note">
+                          <span class="dot dot-product bg-purple"></span>
+                          <span>India</span>
+                        </div>
+                        <p class="mb-0">$45,278</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Patients Group</h2>
+            <button mat-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Action</button>
+              <button mat-menu-item>Another action</button>
+              <button mat-menu-item>Something else here</button>
+            </mat-menu>
+          </div>
+          <div class="list-body">
+            <ul class="list-unstyled list-unstyled-noborder" style="position: relative; max-height:330px;"
+              [perfectScrollbar]>
+              <li class="patient-group-list">
+                <div class="d-flex">
+                  <div class="lbl-bedge l-bg-orange">
+                    <span class="lbl-bedge-title">C</span>
+                  </div>
+                  <div class="group-details font-16">Cholesterol</div>
+                </div>
+                <div class="ms-auto">
+                  <div class="media-title text-muted mb-0 font-14">5 Patients</div>
+                </div>
+              </li>
+              <li class="patient-group-list">
+                <div class="d-flex">
+                  <div class="lbl-bedge l-bg-card1">
+                    <span class="lbl-bedge-title">D</span>
+                  </div>
+                  <div class="group-details font-16">Diabetic</div>
+                </div>
+                <div class="ms-auto">
+                  <div class="media-title text-muted mb-0 font-14">14 Patients</div>
+                </div>
+              </li>
+              <li class="patient-group-list">
+                <div class="d-flex">
+                  <div class="lbl-bedge l-bg-card2">
+                    <span class="lbl-bedge-title">L</span>
+                  </div>
+                  <div class="group-details font-16">Low Blood Pressure</div>
+                </div>
+                <div class="ms-auto">
+                  <div class="media-title text-muted mb-0 font-14">10 Patients</div>
+                </div>
+              </li>
+              <li class="patient-group-list">
+                <div class="d-flex">
+                  <div class="lbl-bedge l-bg-cyan">
+                    <span class="lbl-bedge-title">H</span>
+                  </div>
+                  <div class="group-details font-16">Hypertension</div>
+                </div>
+                <div class="ms-auto">
+                  <div class="media-title text-muted mb-0 font-14">21 Patients</div>
+                </div>
+              </li>
+              <li class="patient-group-list">
+                <div class="d-flex">
+                  <div class="lbl-bedge l-bg-red">
+                    <span class="lbl-bedge-title">M</span>
+                  </div>
+                  <div class="group-details font-16">Malaria</div>
+                </div>
+                <div class="ms-auto">
+                  <div class="media-title text-muted mb-0 font-14">11 Patients</div>
+                </div>
+              </li>
+              <li class="patient-group-list">
+                <div class="d-flex">
+                  <div class="lbl-bedge l-bg-card3">
+                    <span class="lbl-bedge-title">D</span>
+                  </div>
+                  <div class="group-details font-16">Dental Problem</div>
+                </div>
+                <div class="ms-auto">
+                  <div class="media-title text-muted mb-0 font-14">17 Patients</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Notice</strong> Board</h2>
+            <button mat-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Action</button>
+              <button mat-menu-item>Another action</button>
+              <button mat-menu-item>Something else here</button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <div class="recent-comment" style="position: relative; max-height: 330px;" [perfectScrollbar]>
+              <div class="notice-board">
+                <div class="table-img">
+                  <img class="notice-object" src="assets/images/user/user6.jpg" alt="...">
+                </div>
+                <div class="notice-body">
+                  <h6 class="notice-heading col-green">Dr. Airi Satou</h6>
+                  <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                  <small class="text-muted">7 hours ago</small>
+                </div>
+              </div>
+              <div class="notice-board">
+                <div class="table-img">
+                  <img class="notice-object" src="assets/images/user/user4.jpg" alt="...">
+                </div>
+                <div class="notice-body">
+                  <h6 class="notice-heading color-primary col-indigo">Dr. Sarah Smith</h6>
+                  <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                  <p class="comment-date">1 hour ago</p>
+                </div>
+              </div>
+              <div class="notice-board">
+                <div class="table-img">
+                  <img class="notice-object" src="assets/images/user/user3.jpg" alt="...">
+                </div>
+                <div class="notice-body">
+                  <h6 class="notice-heading color-danger col-cyan">Dr. Cara Stevens</h6>
+                  <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                  <div class="comment-date">Yesterday</div>
+                </div>
+              </div>
+              <div class="notice-board no-border">
+                <div class="table-img">
+                  <img class="notice-object" src="assets/images/user/user7.jpg" alt="...">
+                </div>
+                <div class="notice-body">
+                  <h6 class="notice-heading color-info col-orange">Dr. Ashton Cox</h6>
+                  <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                  <div class="comment-date">Yesterday</div>
+                </div>
+              </div>
+              <div class="notice-board">
+                <div class="table-img">
+                  <img class="notice-object" src="assets/images/user/user9.jpg" alt="...">
+                </div>
+                <div class="notice-body">
+                  <h6 class="notice-heading color-primary col-red">Dr. Mark Hay</h6>
+                  <p>Lorem ipsum dolor sit amet, id quo eruditi eloquentiam.</p>
+                  <p class="comment-date">1 hour ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Recent</strong> Activity</h2>
+            <button mat-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Action</button>
+              <button mat-menu-item>Another action</button>
+              <button mat-menu-item>Something else here</button>
+            </mat-menu>
+          </div>
+          <div class="body">
+            <div class="sl-item sl-primary">
+              <div class="sl-content">
+                <small class="text-muted">
+                  <i class="fa fa-user position-left"></i> 5 mins ago</small>
+                <p>Lorem ipsum dolor sit amet conse ctetur which ascing elit users.</p>
+              </div>
+            </div>
+            <div class="sl-item sl-danger">
+              <div class="sl-content">
+                <small class="text-muted">
+                  <i class="fa fa-user position-left"></i> 8 mins ago</small>
+                <p>Lorem ipsum dolor sit ametcon the sectetur that ascing elit users.</p>
+              </div>
+            </div>
+            <div class="sl-item sl-success">
+              <div class="sl-content">
+                <small class="text-muted">
+                  <i class="fa fa-user position-left"></i> 10 mins ago</small>
+                <p>Lorem ipsum dolor sit amet cons the ecte tur and adip ascing elit users.</p>
+              </div>
+            </div>
+            <div class="sl-item sl-primary">
+              <div class="sl-content">
+                <small class="text-muted">
+                  <i class="fa fa-user position-left"></i> 5 mins ago</small>
+                <p>Lorem ipsum dolor sit amet conse ctetur which ascing elit users.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Operations</strong></h2>
+            <button mat-button [matMenuTriggerFor]="menu" class="header-dropdown">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Action</button>
+              <button mat-menu-item>Another action</button>
+              <button mat-menu-item>Something else here</button>
+            </mat-menu>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <table class="table display product-overview mb-30" id="support_table">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Assigned Doctor</th>
+                    <th>Date Of Admit</th>
+                    <th>Diseases</th>
+                    <th>Room No</th>
+                    <th>Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Jens Brincker</td>
+                    <td>Dr.Kenny Josh</td>
+                    <td>27/05/2016</td>
+                    <td>
+                      <div class="badge col-green">Influenza</div>
+                    </td>
+                    <td>101</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Mark Hay</td>
+                    <td>Dr. Mark</td>
+                    <td>26/05/2017</td>
+                    <td>
+                      <div class="badge col-red">Cholera</div>
+                    </td>
+                    <td>105</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Anthony Davie</td>
+                    <td>Dr.Cinnabar</td>
+                    <td>21/05/2016</td>
+                    <td>
+                      <div class="badge col-cyan">Amoebiasis</div>
+                    </td>
+                    <td>106</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>David Perry</td>
+                    <td>Dr.Felix </td>
+                    <td>20/04/2016</td>
+                    <td>
+                      <div class="badge col-purple">Jaundice</div>
+                    </td>
+                    <td>105</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Anthony Davie</td>
+                    <td>Dr.Beryl</td>
+                    <td>24/05/2016</td>
+                    <td>
+                      <div class="badge col-purple">Leptospirosis</div>
+                    </td>
+                    <td>102</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Alan Gilchrist</td>
+                    <td>Dr.Joshep</td>
+                    <td>22/05/2016</td>
+                    <td>
+                      <div class="badge col-red">Hepatitis</div>
+                    </td>
+                    <td>103</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Mark Hay</td>
+                    <td>Dr.Jayesh</td>
+                    <td>18/06/2016</td>
+                    <td>
+                      <div class="badge col-green">Typhoid</div>
+                    </td>
+                    <td>107</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Sue Woodger</td>
+                    <td>Dr.Sharma</td>
+                    <td>17/05/2016</td>
+                    <td>
+                      <div class="badge col-blue">Malaria</div>
+                    </td>
+                    <td>108</td>
+                    <td>
+                      <button mat-icon-button>
+                        <mat-icon>edit</mat-icon>
+                      </button>
+                      <button mat-icon-button>
+                        <mat-icon class="col-red">delete</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

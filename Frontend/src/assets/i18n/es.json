@@ -1,0 +1,104 @@
+{
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "-- Principal"
+    },
+    "HOME": {
+      "TEXT": "Casa",
+      "LIST": {
+        "DASHBOARD1": "Tablero 1",
+        "DASHBOARD2": "Tablero 2",
+        "DOCTOR-DASHBOARD": "Tablero médico",
+        "PATIENT-DASHBOARD": "Tablero Paciente"
+      }
+    },
+    "APPOINTMENTS": {
+      "TEXT": "Equipo",
+      "LIST": {
+        "VIEW-APPOINTMENT": "Ver cita",
+        "BOOK-APPOINTMENT": "Reservar una cita",
+        "EDIT-APPOINTMENT": "Editar cita"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Doctoras",
+      "LIST": {
+        "ALL-DOCTOR": "Todas las doctores",
+        "ADD-DOCTOR": "Agregar doctora",
+        "EDIT-DOCTOR": "Editar doctora",
+        "PROFILE": "Perfil médico"
+      }
+    },
+    "STAFF": {
+      "TEXT": "Personal",
+      "LIST": {
+        "ALL-STAFF": "Todo el personal",
+        "ADD-STAFF": "Agregar personal",
+        "EDIT-STAFF": "Editar personal",
+        "PROFILE": "Perfil del personal"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Pacientes",
+      "LIST": {
+        "ALL-PATIENT": "Todas las pacientes",
+        "ADD-PATIENT": "Agregar paciente",
+        "EDIT-PATIENT": "Editar paciente",
+        "PROFILE": "Perfil del paciente"
+      }
+    },
+    "ROOMS": {
+      "TEXT": "Habitaciones",
+      "LIST": {
+        "ALLOTED-ROOMS": "Habitaciones asignadas",
+        "NEW-ALLOTMENT": "Nueva asignación",
+        "EDIT-ALLOTMENT": "Editar asignación"
+      }
+    },
+    "PAYMENTS": {
+      "TEXT": "Pagos",
+      "LIST": {
+        "ALL-PAYMENTS": "Todos los pagos",
+        "ADD-PAYMENT": "Agregar pago",
+        "INVOICE": "Factura"
+      }
+    },
+    "DOCTOR": {    
+        "DASHBOARD": "Tablero",
+        "APPOINTMENTS": "Equipo",
+        "DOCTORS": "Doctoras",
+        "PATIENTS": "Pacientes",
+        "SETTINGS": "Configuraciones",
+        "CHAT": "Charla"
+    },
+    "PATIENT": {    
+      "TEXT": "Paciente",
+      "DASHBOARD": "Tablero",
+      "APPOINTMENTS": {
+        "TEXT": "Equipo",
+        "LIST": {
+          "TODAY": "Citas de hoy",
+          "UPCOMING": "Próximas citas",
+          "PAST": "Nombramientos anteriores"
+        }
+      },
+      "PRESCRIPTIONS": "Prescripciones",
+      "MEDICAL-RECORD": "Historial médico",
+      "BILLING": "Facturación",
+      "CHAT": "Charla",
+      "SETTINGS": "Configuraciones"
+    },
+    "APPS": {
+      "TEXT": "-- Aplicaciones"
+    },
+    "CALENDAR": {
+      "TEXT": "Calendario"
+    },
+    "TASK": {
+      "TEXT": "Tarea"
+    },
+    "CONTACTS": {
+      "TEXT": "Contactos"
+    }
+  }
+}

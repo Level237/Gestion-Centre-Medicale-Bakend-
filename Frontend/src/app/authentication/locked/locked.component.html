@@ -1,0 +1,58 @@
+<div class="auth-container">
+  <div class="row auth-main">
+    <div class="col-sm-6 px-0 d-none d-sm-block">
+      <div class="left-img" style="background-image: url(assets/images/pages/bg-01.png);">
+      </div>
+    </div>
+    <div class="col-sm-6 auth-form-section">
+      <div class="form-section">
+        <div class="auth-wrapper">
+          <form class="validate-form" [formGroup]="authForm" (ngSubmit)="onSubmit()">
+            <div class="auth-locked">
+              <div class="image">
+                <img src={{userImg}} alt="User">
+              </div>
+            </div>
+            <span class="auth-locked-title p-b-34 p-t-27">
+              {{userFullName}}
+            </span>
+            <div class="text-center">
+              <p class="txt1 p-b-20">
+                Locked
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+                <span class="error-subheader2 p-t-20 p-b-15">
+                  Enter your password here.
+                </span>
+                <mat-form-field class="example-full-width" appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input matInput formControlName="password" [type]="hide ? 'password' : 'text'" required>
+                  <mat-icon matSuffix (click)="hide = !hide">
+                    {{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                  <mat-error *ngIf="authForm.get('password').hasError('required')">
+                    Password is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="container-auth-form-btn mt-5">
+              <button mat-flat-button color="primary" class="auth-form-btn" [disabled]="!authForm.valid " type="submit">
+                Reset My Password
+              </button>
+            </div>
+            <div class="w-full p-t-15 p-b-15 text-center">
+              <div>
+                <a routerLink="/authentication/signin" class="txt1">
+                  Need Help?
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
