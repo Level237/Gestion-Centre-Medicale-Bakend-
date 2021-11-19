@@ -17,6 +17,9 @@ class CreatePatientsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
+            $table->enum('sexe',['M','F']);
+            $table->string('address');
+            $table->integer('phone');
             $table->string('password');
             $table->timestamps();
         });

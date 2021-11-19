@@ -17,7 +17,7 @@ class CreateRoomsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('libellé');
-            $table->string('type');
+            $table->enum('type',['Consultation','Rendez-vous','Vaccination']);
             $table->timestamps();
         });
     }

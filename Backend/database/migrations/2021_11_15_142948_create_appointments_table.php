@@ -15,13 +15,7 @@ class CreateAppointmentsTable extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
-            $table->string('img');
-            $table->string('name');
-            $table->string('email');
-            $table->string('mobile');
-            $table->string('dateTime');
-            $table->string('adress');
-            $table->string('disease');
+            $table->enum('type',['Consultation,Vaccination']);
             $table->timestamps();
         });
     }

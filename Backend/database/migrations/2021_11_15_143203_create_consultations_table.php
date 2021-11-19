@@ -15,6 +15,7 @@ class CreateConsultationsTable extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
+            $table->string('Observation');
             $table->text('resultat');
             $table->timestamps();
         });
