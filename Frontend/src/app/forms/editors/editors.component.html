@@ -1,0 +1,40 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Editors</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">Forms</a>
+            </li>
+            <li class="breadcrumb-item active">Editors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- CKEditor -->
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Ckeditor</strong>
+            </h2>
+
+          </div>
+          <div class="body">
+            <ckeditor [editor]="Editor" data="<p>Hello, world!</p>"></ckeditor>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- #END# CKEditor -->
+  </div>
+</section>

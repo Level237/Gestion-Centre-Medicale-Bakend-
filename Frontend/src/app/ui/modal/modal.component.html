@@ -1,0 +1,196 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Modals</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">UI</a>
+            </li>
+            <li class="breadcrumb-item active">Modals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>Simple Modal Dialog </h2>
+
+          </div>
+          <div class="body">
+            <h6>Simple Dialog With Action Button</h6>
+            <br>
+            <button mat-raised-button color="primary" (click)="dialog()">Click Me To Open Dialog</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>Dialog With Form</h2>
+
+          </div>
+          <div class="body">
+            <div>
+              <h6>Dialog with Form Example</h6>
+              <br>
+              <button mat-raised-button color="primary" (click)="openDialog()">Click Here</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Bootstrap Modal</strong>
+            </h2>
+
+          </div>
+          <div class="body">
+            <div class="row clearfix js-sweetalert">
+              <!-- #START# Basic Modal -->
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <p>Basic Modal Demo</p>
+                <ng-template #content let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Modal title</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true"><i class="material-icons">close</i></span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Content goes here..
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+                  </div>
+                </ng-template>
+                <button mat-raised-button type="button" (click)="Basicopen(content)" color="primary">Basic
+                  Modal</button>
+              </div>
+              <!-- #END# Basic Modal -->
+              <!-- #START# Form Modal -->
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <p>Modal With Form</p>
+                <ng-template #formContent let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Modal title</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true"><i class="material-icons">close</i></span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form [formGroup]="addCusForm">
+                      <div class="text-inside">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="First Name" value={{fname}} formControlName="firstname" required>
+                          <mat-error *ngIf="addCusForm.controls.firstname.hasError('required')">
+                            Please enter first name
+                          </mat-error>
+                          <mat-error *ngIf="addCusForm.controls.firstname.hasError('pattern')">
+                            Please enter valid first name
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="text-inside">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Last Name" value={{lname}} formControlName="lastname" required>
+                          <mat-error *ngIf="addCusForm.controls.lastname.hasError('required')">
+                            Please enter last name
+                          </mat-error>
+                          <mat-error *ngIf="addCusForm.controls.lastname.hasError('pattern')">
+                            Please enter valid last name
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="text-inside">
+                        <mat-form-field class="example-full-width">
+                          <input matInput placeholder="Email address" formControlName="email" required>
+                          <mat-error *ngIf="addCusForm.controls.email.hasError('required')">
+                            Please enter email id
+                          </mat-error>
+                          <mat-error *ngIf="addCusForm.controls.email.hasError('email')">
+                            Please enter valid email id
+                          </mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="text-inside">
+                        <mat-form-field class="example-full-width">
+                          <textarea matInput placeholder="Address"></textarea>
+                        </mat-form-field>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button mat-raised-button type="button" color="primary">Save</button>
+                    <button mat-button type="button" (click)="modal.close()">Cancel</button>
+                  </div>
+                </ng-template>
+                <button mat-raised-button type="button" (click)="FormModalOpen(formContent)" color="primary">Modal With
+                  Form</button>
+              </div>
+              <!-- #END# Form Modal -->
+              <!-- #START# Vertically Center -->
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <p>Modal With Vertically Centered</p>
+                <ng-template #formContent let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Modal title</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true"><i class="material-icons">close</i></span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Content goes here..
+                  </div>
+                  <div class="modal-footer">
+                    <button mat-raised-button type="button" color="primary">Save</button>
+                    <button mat-button type="button" (click)="modal.close()">Cancel</button>
+                  </div>
+                </ng-template>
+                <button mat-raised-button type="button" (click)="openVerticallyCentered(formContent)"
+                  color="primary">Vertically Center </button>
+              </div>
+              <!-- #END# Vertically Center -->
+              <!-- #START# Small Modal -->
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <p>Small Modal</p>
+                <button mat-raised-button type="button" (click)="openSm(formContent)" color="primary">Small Modal
+                </button>
+              </div>
+              <!-- #END# Small Modal -->
+              <!-- #START# Large Modal -->
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <p>Large Modal</p>
+                <button mat-raised-button type="button" (click)="openLg(formContent)" color="primary">Large Modal
+                </button>
+              </div>
+              <!-- #END# Large Modal -->
+              <!-- #START# Extra Large Modal -->
+              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <p>Extra Large Modal</p>
+                <button mat-raised-button type="button" (click)="openXl(formContent)" color="primary">Extra Large Modal
+                </button>
+              </div>
+              <!-- #END# Extra Large Modal -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { ForgotPasswordComponent } from './forgot-password.component';
-describe('ForgotPasswordComponent', () => {
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { ForgotPasswordComponent } from "./forgot-password.component";
+describe("ForgotPasswordComponent", () => {
   let component: ForgotPasswordComponent;
   let fixture: ComponentFixture<ForgotPasswordComponent>;
   beforeEach(
@@ -15,7 +15,7 @@ describe('ForgotPasswordComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 @Component({
-  selector: 'app-forgot-password',
-  templateUrl: './forgot-password.component.html',
-  styleUrls: ['./forgot-password.component.scss'],
+  selector: "app-forgot-password",
+  templateUrl: "./forgot-password.component.html",
+  styleUrls: ["./forgot-password.component.scss"],
 })
 export class ForgotPasswordComponent implements OnInit {
   authForm: FormGroup;
@@ -18,12 +18,12 @@ export class ForgotPasswordComponent implements OnInit {
   ngOnInit() {
     this.authForm = this.formBuilder.group({
       email: [
-        '',
+        "",
         [Validators.required, Validators.email, Validators.minLength(5)],
       ],
     });
     // get return url from route parameters or default to '/'
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+    this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
   }
   get f() {
     return this.authForm.controls;
@@ -34,7 +34,7 @@ export class ForgotPasswordComponent implements OnInit {
     if (this.authForm.invalid) {
       return;
     } else {
-      this.router.navigate(['/dashboard/main']);
+      this.router.navigate(["/dashboard/main"]);
     }
   }
 }

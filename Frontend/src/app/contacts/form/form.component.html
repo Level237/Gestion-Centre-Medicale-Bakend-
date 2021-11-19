@@ -1,0 +1,141 @@
+<div class="addContainer">
+  <div *ngIf="!isDetails" class="contact-form">
+    <div class="modalHeader">
+      <div class="editRowModal">
+        <div class="modalHeader clearfix">
+          <img [src]='contacts.img' alt="avatar">
+          <div class="modal-about">
+            <div class="font-weight-bold p-t-5 msl-3 font-17">
+              {{dialogTitle}}</div>
+          </div>
+        </div>
+      </div>
+      <button mat-icon-button (click)="dialogRef.close()" aria-label="Close dialog">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div mat-dialog-content>
+      <form class="register-form m-4" [formGroup]="contactsForm" (ngSubmit)="submit">
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+            <mat-form-field class="example-full-width mb-3" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" required>
+              <i class="material-icons-two-tone color-icon" matSuffix>face</i>
+              <mat-error *ngIf="contactsForm.get('name').hasError('required')">
+                Name is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+            <mat-form-field class="example-full-width mb-3" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" required>
+              <i class="material-icons-two-tone color-icon" matSuffix>email</i>
+              <mat-error *ngIf="contactsForm.get('email').hasError('required') || contactsForm.get('email').touched">
+                Please enter a valid email address
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+            <mat-form-field class="example-full-width mb-3" appearance="outline">
+              <mat-label>Mobile</mat-label>
+              <input matInput formControlName="mobile" type="number">
+              <i class="material-icons-two-tone color-icon" matSuffix>smartphone</i>
+              <mat-error *ngIf="contactsForm.get('mobile').hasError('required')">
+                Mobile is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+            <mat-form-field class="example-full-width mb-3" appearance="outline">
+              <mat-label>Birth date</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="birthDate">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="contactsForm.get('birthDate').hasError('required')">
+                Please select date
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+            <mat-form-field class="example-full-width mb-3" appearance="outline">
+              <mat-label>Address</mat-label>
+              <textarea matInput formControlName="address"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+            <mat-form-field class="example-full-width mb-3" appearance="outline">
+              <mat-label>Note</mat-label>
+              <textarea matInput formControlName="note"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+            <div class="example-button-row">
+              <button mat-raised-button color="primary" [type]="submit" [disabled]="!contactsForm.valid"
+                [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+              <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div *ngIf="isDetails" class="contact-details">
+    <div class="modalHeader">
+      <div class="editRowModal">
+        <div class="modalHeader clearfix">
+          <div class="modal-about contact-header">
+            <div class="contact-details-img">
+              <img [src]='contacts.img' alt="avatar">
+            </div>
+            <div class="contact-details-heading">
+              <div class="contact-details-name mb-2">{{contacts.name}}</div>
+              <div class="badge col-green">Friends</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button mat-icon-button (click)="dialogRef.close()" aria-label="Close dialog">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div mat-dialog-content>
+      <mat-card-content>
+        <div class="contact-details-field">
+          <i class="material-icons-two-tone color-icon">email</i>
+          <div class="contact-detail-info"> {{contacts.email}}
+          </div>
+        </div>
+        <div class="contact-details-field">
+          <i class="material-icons-two-tone color-icon">phonelink_ring</i>
+          <div class="contact-detail-info"> {{contacts.mobile}}
+          </div>
+        </div>
+        <div class="contact-details-field">
+          <i class="material-icons-two-tone color-icon">cake</i>
+          <div class="contact-detail-info"> {{contacts.birthDate | date: 'MMMM d, yyyy'}}
+          </div>
+        </div>
+        <div class="contact-details-field">
+          <i class="material-icons-two-tone color-icon">location_on</i>
+          <div class="contact-detail-info"> {{contacts.address}}
+          </div>
+        </div>
+        <div class="contact-details-field">
+          <i class="material-icons-two-tone color-icon">note</i>
+          <div class="contact-detail-info"> {{contacts.note}}
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+</div>

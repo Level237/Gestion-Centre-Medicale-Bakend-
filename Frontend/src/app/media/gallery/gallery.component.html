@@ -1,0 +1,42 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Gallery</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">Medias</a>
+            </li>
+            <li class="breadcrumb-item active">Gallery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Image Gallery -->
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="body">
+            <div class="group-2">
+              <div>
+                <img *ngFor="let img of imageObject; let i = index" [src]="img.thumbImage || img.posterImage"
+                  (click)="showLightbox(i)" />
+              </div>
+            </div>
+
+            <!-- ng-image-fullscreen-view  -->
+            <ng-image-fullscreen-view [images]="imageObject" [imageIndex]="currentIndex" [show]="showFlag"
+              (close)="closeEventHandler()"></ng-image-fullscreen-view>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

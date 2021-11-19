@@ -1,0 +1,51 @@
+<div class="addContainer">
+  <div *ngIf="isDetails" class="contact-details">
+    <div class="modalHeader">
+      <div class="editRowModal">
+        <div class="modalHeader clearfix">
+          <div class="modal-about contact-header">
+            <div class="contact-details-img">
+              <img [src]='appointments.img' alt="avatar">
+            </div>
+            <div class="contact-details-heading">
+              <div class="contact-details-name mb-2">{{appointments.name}}</div>
+              <div class="badge col-green">Patient</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button mat-icon-button (click)="dialogRef.close()" aria-label="Close dialog">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div mat-dialog-content>
+      <mat-card-content>
+        <div class="contact-details-field" matTooltip="Appointment Date & TIme" [matTooltipPosition]="'above'">
+          <i class="material-icons-two-tone color-icon">event_note</i>
+          <div class="contact-detail-info"> {{appointments.dateTime | date: 'MMMM d, yyyy, HH:mm'}}
+          </div>
+        </div>
+        <div class="contact-details-field" matTooltip="Patient Email Address" [matTooltipPosition]="'above'">
+          <i class="material-icons-two-tone color-icon">email</i>
+          <div class="contact-detail-info"> {{appointments.email}}
+          </div>
+        </div>
+        <div class="contact-details-field" matTooltip="Patient Mobile Number" [matTooltipPosition]="'above'">
+          <i class="material-icons-two-tone color-icon">phonelink_ring</i>
+          <div class="contact-detail-info"> {{appointments.mobile}}
+          </div>
+        </div>
+        <div class="contact-details-field" matTooltip="Patient Address" [matTooltipPosition]="'above'">
+          <i class="material-icons-two-tone color-icon">location_on</i>
+          <div class="contact-detail-info"> {{appointments.address}}
+          </div>
+        </div>
+        <div class="contact-details-field" matTooltip="Patient Disease" [matTooltipPosition]="'above'">
+          <i class="material-icons-two-tone color-icon">healing</i>
+          <div class="contact-detail-info"> {{appointments.disease}}
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+</div>

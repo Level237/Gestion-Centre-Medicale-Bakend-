@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { LockedComponent } from './locked.component';
-describe('LockedComponent', () => {
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { LockedComponent } from "./locked.component";
+describe("LockedComponent", () => {
   let component: LockedComponent;
   let fixture: ComponentFixture<LockedComponent>;
   beforeEach(
@@ -15,7 +15,7 @@ describe('LockedComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

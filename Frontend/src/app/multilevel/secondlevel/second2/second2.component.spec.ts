@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 
-import { Second2Component } from './second2.component';
+import { Second2Component } from "./second2.component";
 
-describe('Second2Component', () => {
+describe("Second2Component", () => {
   let component: Second2Component;
   let fixture: ComponentFixture<Second2Component>;
 
@@ -20,7 +20,7 @@ describe('Second2Component', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

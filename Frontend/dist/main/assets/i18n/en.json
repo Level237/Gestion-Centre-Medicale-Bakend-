@@ -1,0 +1,104 @@
+{
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "-- Main"
+    },
+    "HOME": {
+      "TEXT": "Home",
+      "LIST": {
+        "DASHBOARD1": "Dashboard 1",
+        "DASHBOARD2": "Dashboard 2",
+        "DOCTOR-DASHBOARD": "Doctor Dashboard",
+        "PATIENT-DASHBOARD": "Patient Dashboard"
+      }
+    },
+    "APPOINTMENTS": {
+      "TEXT": "Appointments",
+      "LIST": {
+        "VIEW-APPOINTMENT": "View Appointment",
+        "BOOK-APPOINTMENT": "Book Appointment",
+        "EDIT-APPOINTMENT": "Edit Appointment"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Doctors",
+      "LIST": {
+        "ALL-DOCTOR": "All Doctors",
+        "ADD-DOCTOR": "Add Doctor",
+        "EDIT-DOCTOR": "Edit Doctor",
+        "PROFILE": "Doctor Profile"
+      }
+    },
+    "STAFF": {
+      "TEXT": "Staff",
+      "LIST": {
+        "ALL-STAFF": "All Staff",
+        "ADD-STAFF": "Add Staff",
+        "EDIT-STAFF": "Edit Staff",
+        "PROFILE": "Staff Profile"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Patients",
+      "LIST": {
+        "ALL-PATIENT": "All Patients",
+        "ADD-PATIENT": "Add Patient",
+        "EDIT-PATIENT": "Edit Patient",
+        "PROFILE": "Patient Profile"
+      }
+    },
+    "ROOMS": {
+      "TEXT": "Room Allotment",
+      "LIST": {
+        "ALLOTED-ROOMS": "Alloted Rooms",
+        "NEW-ALLOTMENT": "New Allotment",
+        "EDIT-ALLOTMENT": "Edit Allotment"
+      }
+    },
+    "PAYMENTS": {
+      "TEXT": "Payments",
+      "LIST": {
+        "ALL-PAYMENTS": "All Payments",
+        "ADD-PAYMENT": "Add Payment",
+        "INVOICE": "Invoice"
+      }
+    },
+    "DOCTOR": {    
+        "DASHBOARD": "Dashboard",
+        "APPOINTMENTS": "Appointments",
+        "DOCTORS": "Doctors",
+        "PATIENTS": "Patients",
+        "SETTINGS": "Settings",
+        "CHAT": "Chat"
+    },
+    "PATIENT": {    
+      "TEXT": "Patient",
+      "DASHBOARD": "Dashboard",
+      "APPOINTMENTS": {
+        "TEXT": "Appointments",
+        "LIST": {
+          "TODAY": "Today Appointments",
+          "UPCOMING": "Upcoming Appointments",
+          "PAST": "Past Appointments"
+        }
+      },
+      "PRESCRIPTIONS": "Prescriptions",
+      "MEDICAL-RECORD": "Medical Record",
+      "BILLING": "Billing",
+      "CHAT": "Chat",
+      "SETTINGS": "Settings"
+    },
+    "APPS": {
+      "TEXT": "-- Apps"
+    },
+    "CALENDAR": {
+      "TEXT": "Calendar"
+    },
+    "TASK": {
+      "TEXT": "Task"
+    },
+    "CONTACTS": {
+      "TEXT": "Contacts"
+    }
+  }
+}

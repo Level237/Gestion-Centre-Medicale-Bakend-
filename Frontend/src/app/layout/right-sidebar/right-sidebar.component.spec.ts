@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { RightSidebarComponent } from './right-sidebar.component';
-describe('RightSidebarComponent', () => {
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { RightSidebarComponent } from "./right-sidebar.component";
+describe("RightSidebarComponent", () => {
   let component: RightSidebarComponent;
   let fixture: ComponentFixture<RightSidebarComponent>;
   beforeEach(
@@ -15,7 +15,7 @@ describe('RightSidebarComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

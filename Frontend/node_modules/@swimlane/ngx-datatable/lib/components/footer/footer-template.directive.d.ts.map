@@ -1,0 +1,1 @@
+{"version":3,"file":"footer-template.directive.d.ts","sources":["footer-template.directive.d.ts"],"names":[],"mappings":"AAAA;;AACA;AACA;AACA;;;AACA","sourcesContent":["import { TemplateRef } from '@angular/core';\nexport declare class DataTableFooterTemplateDirective {\n    template: TemplateRef<any>;\n    constructor(template: TemplateRef<any>);\n}\n"]}

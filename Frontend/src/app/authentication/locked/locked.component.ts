@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from 'src/app/core/service/auth.service';
-import { Role } from 'src/app/core/models/role';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { AuthService } from "src/app/core/service/auth.service";
+import { Role } from "src/app/core/models/role";
 @Component({
-  selector: 'app-locked',
-  templateUrl: './locked.component.html',
-  styleUrls: ['./locked.component.scss'],
+  selector: "app-locked",
+  templateUrl: "./locked.component.html",
+  styleUrls: ["./locked.component.scss"],
 })
 export class LockedComponent implements OnInit {
   authForm: FormGroup;
@@ -21,12 +21,12 @@ export class LockedComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.authForm = this.formBuilder.group({
-      password: ['', Validators.required],
+      password: ["", Validators.required],
     });
     this.userImg = this.authService.currentUserValue.img;
     this.userFullName =
       this.authService.currentUserValue.firstName +
-      ' ' +
+      " " +
       this.authService.currentUserValue.lastName;
   }
   get f() {
@@ -40,13 +40,13 @@ export class LockedComponent implements OnInit {
     } else {
       const role = this.authService.currentUserValue.role;
       if (role === Role.All || role === Role.Admin) {
-        this.router.navigate(['/admin/dashboard/main']);
+        this.router.navigate(["/admin/dashboard/main"]);
       } else if (role === Role.Doctor) {
-        this.router.navigate(['/doctor/dashboard']);
+        this.router.navigate(["/doctor/dashboard"]);
       } else if (role === Role.Patient) {
-        this.router.navigate(['/patient/dashboard']);
+        this.router.navigate(["/patient/dashboard"]);
       } else {
-        this.router.navigate(['/authentication/signin']);
+        this.router.navigate(["/authentication/signin"]);
       }
     }
   }

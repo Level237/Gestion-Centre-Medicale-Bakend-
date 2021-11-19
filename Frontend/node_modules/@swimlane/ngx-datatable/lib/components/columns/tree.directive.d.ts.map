@@ -1,0 +1,1 @@
+{"version":3,"file":"tree.directive.d.ts","sources":["tree.directive.d.ts"],"names":[],"mappings":"AAAA;;AACA;AACA;AACA;;;AACA","sourcesContent":["import { TemplateRef } from '@angular/core';\nexport declare class DataTableColumnCellTreeToggle {\n    template: TemplateRef<any>;\n    constructor(template: TemplateRef<any>);\n}\n"]}

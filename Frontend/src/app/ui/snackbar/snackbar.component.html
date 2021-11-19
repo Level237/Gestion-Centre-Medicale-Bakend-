@@ -1,0 +1,101 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Snackbar</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">UI</a>
+            </li>
+            <li class="breadcrumb-item active">Sbackbar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Notification</strong> Positions</h2>
+
+          </div>
+          <div class="body">
+            <div class="row clearfix jsdemo-notification-button">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button color="primary"
+                  (click)="showNotification('black','You have new Massage...!!!','top','left')">Top
+                  Left</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button color="accent"
+                  (click)="showNotification('black','You have new Massage...!!!','bottom','left')">Bottom
+                  Left</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button color="warn"
+                  (click)="showNotification('black','You have new Massage...!!!','bottom','center')">Bottom
+                  Center</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-green"
+                  (click)="showNotification('black','You have new Massage...!!!','bottom','right')">Bottom
+                  Right
+                </button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-cyan"
+                  (click)="showNotification('black','You have new Massage...!!!','top','Right')">Top
+                  Right</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-blue"
+                  (click)="showNotification('black','You have new Massage...!!!','top','center')">
+                  Top Center
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Notification</strong> Types</h2>
+
+          </div>
+          <div class="body">
+            <div class="row clearfix jsdemo-notification-button">
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-green"
+                  (click)="showNotification('snackbar-success','You have new Massage...!!!','bottom','center')">Success</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-red"
+                  (click)="showNotification('snackbar-danger','You have new Massage...!!!','bottom','center')">Danger</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-yellow"
+                  (click)="showNotification('snackbar-warning','You have new Massage...!!!','bottom','center')">Warning</button>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3 col-lg-2">
+                <button mat-raised-button class="bg-cyan"
+                  (click)="showNotification('snackbar-info','You have new Massage...!!!','bottom','center')">Info</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

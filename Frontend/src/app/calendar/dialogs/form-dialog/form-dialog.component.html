@@ -1,0 +1,96 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <div class="modal-about">
+          <div class="font-weight-bold p-t-5 msl-3 font-17">
+            {{dialogTitle}}</div>
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="calendarForm">
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Title</mat-label>
+            <input matInput formControlName="title" required>
+            <mat-icon matSuffix>turned_in_not</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category" required>
+              <mat-option [value]="'work'">
+                Work
+              </mat-option>
+              <mat-option [value]="'personal'">
+                Personal
+              </mat-option>
+              <mat-option [value]="'important'">
+                Important
+              </mat-option>
+              <mat-option [value]="'travel'">
+                Travel
+              </mat-option>
+              <mat-option [value]="'friends'">
+                Friends
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Start date</mat-label>
+            <input matInput formControlName="startDate" [owlDateTimeTrigger]="startDate" [owlDateTime]="startDate"
+              placeholder="Choose a date" required>
+            <mat-icon matSuffix [owlDateTimeTrigger]="startDate" class="date-icon">today</mat-icon>
+            <owl-date-time #startDate></owl-date-time>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>End date</mat-label>
+            <input matInput formControlName="endDate" [owlDateTimeTrigger]="endDate" [owlDateTime]="endDate"
+              placeholder="Choose a date" required>
+            <mat-icon matSuffix [owlDateTimeTrigger]="endDate" class="date-icon">today</mat-icon>
+            <owl-date-time #endDate></owl-date-time>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+          <mat-form-field class="example-full-width mb-3" appearance="outline">
+            <mat-label>Event Details</mat-label>
+            <textarea matInput formControlName="details"></textarea>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" [type]="submit" [disabled]="!calendarForm.valid"
+              (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="dialogRef.close()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+        <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12">
+          <div class="example-button-row" *ngIf="showDeleteBtn">
+            <button mat-mini-fab aria-label color="warn" (click)="deleteEvent()">
+              <mat-icon class="font-20">delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

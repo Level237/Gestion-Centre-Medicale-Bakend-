@@ -1,0 +1,5 @@
+/*
+ * Public APIs of ngx-gauge
+ */
+export * from './ngx-gauge.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljX2FwaS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25neC1nYXVnZS9zcmMvcHVibGljX2FwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7R0FFRztBQUVILGNBQWMsb0JBQW9CLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxyXG4gKiBQdWJsaWMgQVBJcyBvZiBuZ3gtZ2F1Z2VcclxuICovXHJcblxyXG5leHBvcnQgKiBmcm9tICcuL25neC1nYXVnZS5tb2R1bGUnO1xyXG4iXX0=

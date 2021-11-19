@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { MainComponent } from './main.component';
-describe('MainComponent', () => {
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { MainComponent } from "./main.component";
+describe("MainComponent", () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
   beforeEach(
@@ -15,7 +15,7 @@ describe('MainComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

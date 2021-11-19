@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { Page404Component } from './page404.component';
-describe('Page404Component', () => {
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { Page404Component } from "./page404.component";
+describe("Page404Component", () => {
   let component: Page404Component;
   let fixture: ComponentFixture<Page404Component>;
   beforeEach(
@@ -15,7 +15,7 @@ describe('Page404Component', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from "@angular/core";
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -14,7 +14,7 @@ import {
   ApexMarkers,
   ApexGrid,
   ApexTitleSubtitle,
-} from 'ng-apexcharts';
+} from "ng-apexcharts";
 export type areaChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
@@ -64,12 +64,12 @@ export type radialChartOptions = {
   plotOptions: ApexPlotOptions;
 };
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.sass'],
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.sass"],
 })
 export class DashboardComponent implements OnInit {
-  @ViewChild('chart') chart: ChartComponent;
+  @ViewChild("chart") chart: ChartComponent;
   public areaChartOptions: Partial<areaChartOptions>;
   public radialChartOptions: Partial<radialChartOptions>;
   public restRateChartOptions: Partial<restRateChartOptions>;
@@ -86,52 +86,52 @@ export class DashboardComponent implements OnInit {
     this.areaChartOptions = {
       series: [
         {
-          name: 'New Patients',
+          name: "New Patients",
           data: [31, 40, 28, 51, 42, 85, 77],
         },
         {
-          name: 'Old Patients',
+          name: "Old Patients",
           data: [11, 32, 45, 32, 34, 52, 41],
         },
       ],
       chart: {
         height: 350,
-        type: 'area',
+        type: "area",
         toolbar: {
           show: false,
         },
-        foreColor: '#9aa0ac',
+        foreColor: "#9aa0ac",
       },
-      colors: ['#7D4988', '#66BB6A'],
+      colors: ["#7D4988", "#66BB6A"],
       dataLabels: {
         enabled: false,
       },
       stroke: {
-        curve: 'smooth',
+        curve: "smooth",
       },
       xaxis: {
-        type: 'datetime',
+        type: "datetime",
         categories: [
-          '2018-09-19T00:00:00.000Z',
-          '2018-09-19T01:30:00.000Z',
-          '2018-09-19T02:30:00.000Z',
-          '2018-09-19T03:30:00.000Z',
-          '2018-09-19T04:30:00.000Z',
-          '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z',
+          "2018-09-19T00:00:00.000Z",
+          "2018-09-19T01:30:00.000Z",
+          "2018-09-19T02:30:00.000Z",
+          "2018-09-19T03:30:00.000Z",
+          "2018-09-19T04:30:00.000Z",
+          "2018-09-19T05:30:00.000Z",
+          "2018-09-19T06:30:00.000Z",
         ],
       },
       legend: {
         show: true,
-        position: 'top',
-        horizontalAlign: 'center',
+        position: "top",
+        horizontalAlign: "center",
         offsetX: 0,
         offsetY: 0,
       },
 
       tooltip: {
         x: {
-          format: 'dd/MM/yy HH:mm',
+          format: "dd/MM/yy HH:mm",
         },
       },
     };
@@ -141,30 +141,30 @@ export class DashboardComponent implements OnInit {
       series: [44, 55, 67],
       chart: {
         height: 265,
-        type: 'radialBar',
+        type: "radialBar",
       },
       plotOptions: {
         radialBar: {
           dataLabels: {
             name: {
-              fontSize: '22px',
+              fontSize: "22px",
             },
             value: {
-              fontSize: '16px',
+              fontSize: "16px",
             },
             total: {
               show: true,
-              label: 'Total',
+              label: "Total",
               formatter: function (w) {
-                return '249';
+                return "249";
               },
             },
           },
         },
       },
-      colors: ['#ffc107', '#3f51b5', '#8bc34a'],
+      colors: ["#ffc107", "#3f51b5", "#8bc34a"],
 
-      labels: ['Face TO Face', 'E-Consult', 'Available'],
+      labels: ["Face TO Face", "E-Consult", "Available"],
     };
   }
 
@@ -172,49 +172,49 @@ export class DashboardComponent implements OnInit {
     this.restRateChartOptions = {
       series: [
         {
-          name: 'Heart Rate',
+          name: "Heart Rate",
           data: [69, 75, 72, 69, 75, 80, 87],
         },
       ],
       chart: {
         height: 350,
-        type: 'line',
+        type: "line",
         dropShadow: {
           enabled: true,
-          color: '#000',
+          color: "#000",
           top: 18,
           left: 7,
           blur: 10,
           opacity: 0.2,
         },
-        foreColor: '#9aa0ac',
+        foreColor: "#9aa0ac",
         toolbar: {
           show: false,
         },
       },
-      colors: ['#FCB939'],
+      colors: ["#FCB939"],
       dataLabels: {
         enabled: true,
       },
       stroke: {
-        curve: 'smooth',
+        curve: "smooth",
       },
       markers: {
         size: 1,
       },
       xaxis: {
-        categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         title: {
-          text: 'Weekday',
+          text: "Weekday",
         },
       },
       yaxis: {
         title: {
-          text: 'Heart Rate',
+          text: "Heart Rate",
         },
       },
       tooltip: {
-        theme: 'dark',
+        theme: "dark",
         marker: {
           show: true,
         },
@@ -228,49 +228,49 @@ export class DashboardComponent implements OnInit {
     this.performanceRateChartOptions = {
       series: [
         {
-          name: 'Heart Rate',
+          name: "Heart Rate",
           data: [113, 120, 130, 120, 125, 119, 126],
         },
       ],
       chart: {
         height: 350,
-        type: 'line',
+        type: "line",
         dropShadow: {
           enabled: true,
-          color: '#000',
+          color: "#000",
           top: 18,
           left: 7,
           blur: 10,
           opacity: 0.2,
         },
-        foreColor: '#9aa0ac',
+        foreColor: "#9aa0ac",
         toolbar: {
           show: false,
         },
       },
-      colors: ['#545454'],
+      colors: ["#545454"],
       dataLabels: {
         enabled: true,
       },
       stroke: {
-        curve: 'smooth',
+        curve: "smooth",
       },
       markers: {
         size: 1,
       },
       xaxis: {
-        categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
         title: {
-          text: 'Weekday',
+          text: "Weekday",
         },
       },
       yaxis: {
         title: {
-          text: 'Heart Rate',
+          text: "Heart Rate",
         },
       },
       tooltip: {
-        theme: 'dark',
+        theme: "dark",
         marker: {
           show: true,
         },

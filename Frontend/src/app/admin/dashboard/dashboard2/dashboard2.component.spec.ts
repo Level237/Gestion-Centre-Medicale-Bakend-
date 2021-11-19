@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { Dashboard2Component } from './dashboard2.component';
-describe('Dashboard2Component', () => {
+import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
+import { Dashboard2Component } from "./dashboard2.component";
+describe("Dashboard2Component", () => {
   let component: Dashboard2Component;
   let fixture: ComponentFixture<Dashboard2Component>;
   beforeEach(
@@ -15,7 +15,7 @@ describe('Dashboard2Component', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

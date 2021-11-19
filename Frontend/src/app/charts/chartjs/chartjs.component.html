@@ -1,0 +1,157 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">ChatJs</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">Charts</a>
+            </li>
+            <li class="breadcrumb-item active">ChatJs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Line</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart [chartType]="'line'" [datasets]="lineChartData" [labels]="lineChartLabels"
+                [options]="lineChartOptions" [legend]="true">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Line</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart [chartType]="'line'" [datasets]="areaChartData" [labels]="areaChartLabels"
+                [options]="areaChartOptions" [legend]="true">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Bar</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart class="chart" [datasets]="barChartData" [labels]="barChartLabels"
+                [options]="barChartOptions" [colors]="barChartColors" [legend]="barChartLegend"
+                [chartType]="barChartType"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Radar</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart class="chart" [datasets]="radarChartData" [labels]="radarChartLabels"
+                [options]="radarChartOptions" [chartType]="radarChartType" [colors]="radarChartColors"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Doughut</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart class="chart" [data]="doughnutChartData" [labels]="doughnutChartLabels"
+                [options]="doughnutChartOptions" [chartType]="doughnutChartType"
+                [colors]="doughnutChartColors"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Bubble</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart [datasets]="bubbleChartData" [options]="bubbleChartOptions" [legend]="bubbleChartLegend"
+                [chartType]="bubbleChartType">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Polar</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart class="chart" [data]="polarAreaChartData" [options]="polarChartOptions"
+                [labels]="polarAreaChartLabels" [legend]="polarAreaLegend" [chartType]="polarAreaChartType"
+                [colors]="ploarChartColors"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Pie</strong> Chart</h2>
+
+          </div>
+          <div class="body">
+            <div class="recent-report__chart">
+              <canvas baseChart class="chart" [data]="pieChartData" [labels]="pieChartLabels"
+                [options]="pieChartOptions" [chartType]="pieChartType" [colors]="pieChartColors"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

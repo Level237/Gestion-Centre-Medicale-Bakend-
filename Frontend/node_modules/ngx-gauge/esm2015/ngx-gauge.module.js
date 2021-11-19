@@ -1,0 +1,14 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgxGauge } from './gauge/gauge';
+import { NgxGaugeLabel, NgxGaugeValue, NgxGaugePrepend, NgxGaugeAppend } from './gauge/gauge-directives';
+export class NgxGaugeModule {
+}
+NgxGaugeModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [CommonModule],
+                declarations: [NgxGauge, NgxGaugeAppend, NgxGaugePrepend, NgxGaugeValue, NgxGaugeLabel],
+                exports: [NgxGauge, NgxGaugeAppend, NgxGaugePrepend, NgxGaugeValue, NgxGaugeLabel]
+            },] }
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LWdhdWdlLm1vZHVsZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Byb2plY3RzL25neC1nYXVnZS9zcmMvbmd4LWdhdWdlLm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxZQUFZLEVBQUUsTUFBTSxpQkFBaUIsQ0FBQztBQUMvQyxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxhQUFhLEVBQUUsYUFBYSxFQUFFLGVBQWUsRUFBRSxjQUFjLEVBQUUsTUFBTSwwQkFBMEIsQ0FBQztBQU96RyxNQUFNLE9BQU8sY0FBYzs7O1lBTDFCLFFBQVEsU0FBQztnQkFDUixPQUFPLEVBQUUsQ0FBQyxZQUFZLENBQUM7Z0JBQ3ZCLFlBQVksRUFBRSxDQUFDLFFBQVEsRUFBRSxjQUFjLEVBQUUsZUFBZSxFQUFFLGFBQWEsRUFBRSxhQUFhLENBQUM7Z0JBQ3ZGLE9BQU8sRUFBRSxDQUFDLFFBQVEsRUFBRSxjQUFjLEVBQUUsZUFBZSxFQUFFLGFBQWEsRUFBRSxhQUFhLENBQUM7YUFDbkYiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBOZ01vZHVsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5pbXBvcnQgeyBDb21tb25Nb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb21tb24nO1xyXG5pbXBvcnQgeyBOZ3hHYXVnZSB9IGZyb20gJy4vZ2F1Z2UvZ2F1Z2UnO1xyXG5pbXBvcnQgeyBOZ3hHYXVnZUxhYmVsLCBOZ3hHYXVnZVZhbHVlLCBOZ3hHYXVnZVByZXBlbmQsIE5neEdhdWdlQXBwZW5kIH0gZnJvbSAnLi9nYXVnZS9nYXVnZS1kaXJlY3RpdmVzJztcclxuXHJcbkBOZ01vZHVsZSh7XHJcbiAgaW1wb3J0czogW0NvbW1vbk1vZHVsZV0sXHJcbiAgZGVjbGFyYXRpb25zOiBbTmd4R2F1Z2UsIE5neEdhdWdlQXBwZW5kLCBOZ3hHYXVnZVByZXBlbmQsIE5neEdhdWdlVmFsdWUsIE5neEdhdWdlTGFiZWxdLFxyXG4gIGV4cG9ydHM6IFtOZ3hHYXVnZSwgTmd4R2F1Z2VBcHBlbmQsIE5neEdhdWdlUHJlcGVuZCwgTmd4R2F1Z2VWYWx1ZSwgTmd4R2F1Z2VMYWJlbF1cclxufSlcclxuZXhwb3J0IGNsYXNzIE5neEdhdWdlTW9kdWxlIHsgfSJdfQ==

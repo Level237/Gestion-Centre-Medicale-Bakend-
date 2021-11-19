@@ -1,0 +1,475 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Chart Widget</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">Widget</a>
+            </li>
+            <li class="breadcrumb-item active">Chart Widget</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Chart Sample</h2>
+          </div>
+          <div class="body">
+            <div id="chart">
+              <apx-chart [series]="circleChartOptions.series" [chart]="circleChartOptions.chart"
+                [plotOptions]="circleChartOptions.plotOptions" [labels]="circleChartOptions.labels"
+                [legend]="circleChartOptions.legend" [colors]="circleChartOptions.colors"
+                [responsive]="circleChartOptions.responsive"></apx-chart>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <p class="text-muted font-15 text-truncate">Target</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-up col-green m-r-5"></i>$15.3k
+                </h5>
+              </div>
+              <div class="col-4">
+                <p class="text-muted font-15 text-truncate">Last
+                  week</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-down col-red m-r-5"></i>$2.8k
+                </h5>
+              </div>
+              <div class="col-4">
+                <p class="text-muted text-truncate">Last
+                  Month</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-up col-green m-r-5"></i>$12.5k
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Chart Sample</h2>
+          </div>
+          <div class="body">
+            <div id="chart">
+              <apx-chart [series]="radarChartOptions.series" [chart]="radarChartOptions.chart"
+                [xaxis]="radarChartOptions.xaxis" [stroke]="radarChartOptions.stroke"
+                [markers]="radarChartOptions.markers" [fill]="radarChartOptions.fill"></apx-chart>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <p class="text-muted font-15 text-truncate">Target</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-down col-red m-r-5"></i>$15.3k
+                </h5>
+              </div>
+              <div class="col-4">
+                <p class="text-muted font-15 text-truncate">Last
+                  week</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-up col-green m-r-5"></i>$2.8k
+                </h5>
+              </div>
+              <div class="col-4">
+                <p class="text-muted text-truncate">Last
+                  Month</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-down col-red m-r-5"></i>$12.5k
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="header">
+            <h2>Chart Sample</h2>
+          </div>
+          <div class="body">
+            <div id="chart">
+              <apx-chart [series]="areaChartOptions.series" [chart]="areaChartOptions.chart"
+                [xaxis]="areaChartOptions.xaxis" [stroke]="areaChartOptions.stroke" [tooltip]="areaChartOptions.tooltip"
+                [dataLabels]="areaChartOptions.dataLabels">
+              </apx-chart>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <p class="text-muted font-15 text-truncate">Target</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-down col-red m-r-5"></i>$15.3k
+                </h5>
+              </div>
+              <div class="col-4">
+                <p class="text-muted font-15 text-truncate">Last
+                  week</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-up col-green m-r-5"></i>$2.8k
+                </h5>
+              </div>
+              <div class="col-4">
+                <p class="text-muted text-truncate">Last
+                  Month</p>
+                <h5>
+                  <i class="fas fa-arrow-circle-down col-red m-r-5"></i>$12.5k
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+          <div class="card-statistic-4">
+            <div class="align-items-center justify-content-between">
+              <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 card-spacing">
+                  <div class="card-content">
+                    <h5 class="font-15">New Students</h5>
+                    <h2 class="mb-3 font-18">1,025</h2>
+                    <p class="mb-0"><span class="col-green">10%</span> Increase</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <div class="banner-img">
+                    <img src="assets/images/banner/1.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+          <div class="card-statistic-4">
+            <div class="align-items-center justify-content-between">
+              <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 card-spacing">
+                  <div class="card-content">
+                    <h5 class="font-15"> Total Courses</h5>
+                    <h2 class="mb-3 font-18">47</h2>
+                    <p class="mb-0"><span class="col-orange">09%</span> Decrease</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <div class="banner-img">
+                    <img src="assets/images/banner/2.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+          <div class="card-statistic-4">
+            <div class="align-items-center justify-content-between">
+              <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 card-spacing">
+                  <div class="card-content">
+                    <h5 class="font-15">Awards</h5>
+                    <h2 class="mb-3 font-18">128</h2>
+                    <p class="mb-0"><span class="col-green">18%</span>
+                      Increase</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <div class="banner-img">
+                    <img src="assets/images/banner/3.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="card">
+          <div class="card-statistic-4">
+            <div class="align-items-center justify-content-between">
+              <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 card-spacing">
+                  <div class="card-content">
+                    <h5 class="font-15">Revenue</h5>
+                    <h2 class="mb-3 font-18">$48,697</h2>
+                    <p class="mb-0"><span class="col-green">42%</span> Increase</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <div class="banner-img">
+                    <img src="assets/images/banner/4.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="float-start">
+              <h6 class="text-muted">Average Lecture Per Month</h6>
+              <h5>65 <span class="text-muted font-12">(Average)</span></h5>
+            </div>
+            <div class="mb-5">
+              <apx-chart [series]="avgLecChartOptions.series" [chart]="avgLecChartOptions.chart"
+                [xaxis]="avgLecChartOptions.xaxis" [stroke]="avgLecChartOptions.stroke"
+                [colors]="avgLecChartOptions.colors" [dataLabels]="avgLecChartOptions.dataLabels"
+                [legend]="avgLecChartOptions.legend" [markers]="avgLecChartOptions.markers"
+                [grid]="avgLecChartOptions.grid" [yaxis]="avgLecChartOptions.yaxis"
+                [tooltip]="avgLecChartOptions.tooltip" [title]="avgLecChartOptions.title"
+                [fill]="avgLecChartOptions.fill">
+              </apx-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Subject Chart</h2>
+          </div>
+          <div class="body">
+            <div id="chart">
+              <apx-chart [series]="pieChartOptions.series" [chart]="pieChartOptions.chart"
+                [labels]="pieChartOptions.labels" [responsive]="pieChartOptions.responsive"
+                [dataLabels]="pieChartOptions.dataLabels" [legend]="pieChartOptions.legend" class="apex-pie-center">
+              </apx-chart>
+            </div>
+            <div class="table-responsive m-t-15">
+              <table class="table align-items-center">
+                <tbody>
+                  <tr>
+                    <td><i class="fa fa-circle col-cyan msr-2"></i> Music</td>
+                    <td>23</td>
+                    <td class="col-green">+32%</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-circle col-blue msr-2"></i>Science</td>
+                    <td>32</td>
+                    <td class="col-green">+12%</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-circle col-orange msr-2"></i>Economics</td>
+                    <td>12</td>
+                    <td class="col-orange">-12%</td>
+                  </tr>
+                  <tr>
+                    <td><i class="fa fa-circle col-green msr-2"></i>Mathes</td>
+                    <td>32</td>
+                    <td class="col-green">+3%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Recent Report</h2>
+          </div>
+          <div class="body">
+            <!-- Canvas for Chart.js -->
+            <div class="recent-report__chart">
+              <canvas baseChart [chartType]="'line'" [datasets]="areaChartData" [labels]="areaChartLabels"
+                [options]="areaChartOptions2" [plugins]="areaChartPlugins" [legend]="true">
+              </canvas>
+            </div>
+            <!-- Custom Axis -->
+            <div class="axisData">
+              <div class="tick">
+                MON <span class="value productValue">24</span> <span class="value serviceValue">20</span>
+              </div>
+              <div class="tick">
+                TUE <span class="value productValue">18</span> <span class="value serviceValue">22</span>
+              </div>
+              <div class="tick">
+                WED <span class="value productValue">16</span> <span class="value serviceValue">30</span>
+              </div>
+              <div class="tick">
+                THU <span class="value productValue">18</span> <span class="value serviceValue">22</span>
+              </div>
+              <div class="tick">
+                FRI <span class="value productValue">24</span> <span class="value serviceValue">18</span>
+              </div>
+              <div class="tick">
+                SAT <span class="value productValue">36</span> <span class="value serviceValue">22</span>
+              </div>
+              <div class="tick">
+                SUN <span class="value productValue">28</span> <span class="value serviceValue">30</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card">
+          <div class="header">
+            <h2>Recent Report</h2>
+          </div>
+          <div class="body">
+            <!-- Canvas for Chart.js -->
+            <canvas baseChart class="chart" [datasets]="radarChartData" [labels]="radarChartLabels"
+              [options]="radarChartOptions2" [chartType]="radarChartType" [plugins]="radarChartPlugins"
+              [colors]="radarChartColors"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">
+        <div class="info-box7 bg-c-blue order-info-box7">
+          <div class="info-box7-block">
+            <h6 class="m-b-20">Orders Received</h6>
+            <h2 class="text-end"><i class="fas fa-cart-plus float-start"></i><span>358</span></h2>
+            <p class="m-b-0">18% Higher Then Last Month</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="info-box7 bg-c-green order-info-box7">
+          <div class="info-box7-block">
+            <h6 class="m-b-20">Completed Orders</h6>
+            <h2 class="text-end"><i class="fas fa-business-time float-start"></i><span>865</span></h2>
+            <p class="m-b-0">21% Higher Then Last Month</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="info-box7 bg-c-yellow order-info-box7">
+          <div class="info-box7-block">
+            <h6 class="m-b-20">New Orders</h6>
+            <h2 class="text-end"><i class="fas fa-chart-line float-start"></i><span>128</span></h2>
+            <p class="m-b-0">37% Higher Then Last Month</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <div class="info-box7 bg-c-pink order-info-box7">
+          <div class="info-box7-block">
+            <h6 class="m-b-20">Total Earning</h6>
+            <h2 class="text-end"><i class="fas fa-dollar-sign float-start"></i><span>$25698</span></h2>
+            <p class="m-b-0">10% Higher Then Last Month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5>Todays Income</h5>
+                <p class="text-muted">Income For Today</p>
+              </div>
+              <h3 class="text-info">$170</h3>
+            </div>
+            <div class="card-content mt-2">
+              <div class="progress skill-progress m-b-5 w-100">
+                <div class="progress-bar l-bg-purple width-per-45" role="progressbar" aria-valuenow="45"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <p class="text-muted mb-0">Change</p>
+              <p class="text-muted mb-0">75%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5>Total Revenue</h5>
+                <p class="text-muted">Total Income</p>
+              </div>
+              <h3 class="text-success">$120</h3>
+            </div>
+            <div class="card-content mt-2">
+              <div class="progress skill-progress m-b-5 w-100">
+                <div class="progress-bar l-bg-orange width-per-45" role="progressbar" aria-valuenow="45"
+                  aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <p class="text-muted mb-0">Change</p>
+              <p class="text-muted mb-0">25%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5>New Orders</h5>
+                <p class="text-muted">Fresh New Order</p>
+              </div>
+              <h3 class="text-danger">15</h3>
+            </div>
+            <div class="card-content mt-2">
+              <div class="progress skill-progress m-b-5 w-100">
+                <div class="progress-bar l-bg-cyan width-per-45" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between">
+              <p class="text-muted mb-0">Change</p>
+              <p class="text-muted mb-0">50%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h5>New Users</h5>
+                <p class="text-muted">Joined New User</p>
+              </div>
+              <h3 class="text-secondary">12</h3>
+            </div>
+            <div class="card-content mt-2">
+              <div class="progress skill-progress m-b-5 w-100">
+                <div class="progress-bar l-bg-red width-per-45" role="progressbar" aria-valuenow="45" aria-valuemin="0"
+                  aria-valuemax="100"></div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <p class="text-muted mb-0">Change</p>
+              <p class="text-muted mb-0">25%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

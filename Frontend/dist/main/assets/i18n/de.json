@@ -1,0 +1,104 @@
+{
+  "MENUITEMS": {
+    "MAIN": {
+      "TEXT": "-- Main"
+    },
+    "HOME": {
+      "TEXT": "Zuhause",
+      "LIST": {
+        "DASHBOARD1": "Dashboard 1",
+        "DASHBOARD2": "Dashboard 2",
+        "DOCTOR-DASHBOARD": "Doktor Dashboard",
+        "PATIENT-DASHBOARD": "Patienten-Dashboard"
+      }
+    },
+    "APPOINTMENTS": {
+      "TEXT": "Termine",
+      "LIST": {
+        "VIEW-APPOINTMENT": "Termin anzeigen",
+        "BOOK-APPOINTMENT": "Einen Termin verabreden",
+        "EDIT-APPOINTMENT": "Termin bearbeiten"
+      }
+    },
+    "DOCTORS": {
+      "TEXT": "Ärztinnen",
+      "LIST": {
+        "ALL-DOCTOR": "Alle Ärzte",
+        "ADD-DOCTOR": "Doktor hinzufügen",
+        "EDIT-DOCTOR": "Doktor bearbeiten",
+        "PROFILE": "Arztprofil"
+      }
+    },
+    "STAFF": {
+      "TEXT": "Mitarbeiterin",
+      "LIST": {
+        "ALL-STAFF": "Die ganze Belegschaft",
+        "ADD-STAFF": "Mitarbeiter hinzufügen",
+        "EDIT-STAFF": "Mitarbeiter bearbeiten",
+        "PROFILE": "Mitarbeiterprofil"
+      }
+    },
+    "PATIENTS": {
+      "TEXT": "Patientinnen",
+      "LIST": {
+        "ALL-PATIENT": "Alle Patienten",
+        "ADD-PATIENT": "Patient hinzufügen",
+        "EDIT-PATIENT": "Patient bearbeiten",
+        "PROFILE": "Patientenprofil"
+      }
+    },
+    "ROOMS": {
+      "TEXT": "Zimmerzuteilung",
+      "LIST": {
+        "ALLOTED-ROOMS": "Zugewiesene Zimmer",
+        "NEW-ALLOTMENT": "Neue Zuteilung",
+        "EDIT-ALLOTMENT": "Zuteilung bearbeiten"
+      }
+    },
+    "PAYMENTS": {
+      "TEXT": "Zahlungen",
+      "LIST": {
+        "ALL-PAYMENTS": "Alle Zahlungen",
+        "ADD-PAYMENT": "Zahlung hinzufügen",
+        "INVOICE": "Rechnung"
+      }
+    },
+    "DOCTOR": {    
+        "DASHBOARD": "Dashboard",
+        "APPOINTMENTS": "Termine",
+        "DOCTORS": "Ärztinnen",
+        "PATIENTS": "Patientinnen",
+        "SETTINGS": "die Einstellungen",
+        "CHAT": "Plaudern"
+    },
+    "PATIENT": {    
+      "TEXT": "Geduldig",
+      "DASHBOARD": "Dashboard",
+      "APPOINTMENTS": {
+        "TEXT": "Termine",
+        "LIST": {
+          "TODAY": "Heute Termine",
+          "UPCOMING": "Bevorstehende Termine",
+          "PAST": "Frühere Termine"
+        }
+      },
+      "PRESCRIPTIONS": "Rezepte",
+      "MEDICAL-RECORD": "Krankenakte",
+      "BILLING": "Abrechnung",
+      "CHAT": "Plaudern",
+      "SETTINGS": "die Einstellungen"
+    },
+    "APPS": {
+      "TEXT": "-- Apps"
+    },
+    "CALENDAR": {
+      "TEXT": "Kalender"
+    },
+    "TASK": {
+      "TEXT": "Aufgabe"
+    },
+    "CONTACTS": {
+      "TEXT": "Kontakte"
+    }
+  }
+}

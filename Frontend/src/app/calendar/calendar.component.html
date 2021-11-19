@@ -1,0 +1,52 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Calendar</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a href="#" onClick="return false;">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item active">Calendar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-2 col-sm-12 p-l-30">
+                <div class="m-b-25">
+                  <button mat-raised-button color="primary" (click)="addNewEvent()">Add Event</button>
+                </div>
+                <p>My Calendars</p>
+                <div class="filter-container">
+                  <ul>
+                    <li *ngFor="let filter of filters">
+                      <mat-checkbox [checked]="filter.checked" [value]="filter.value" color="primary"
+                        (change)="changeCategory($event, filter)">
+                        {{filter.value}}
+                      </mat-checkbox>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-10 col-sm-12">
+                <div class="panel-body">
+                  <full-calendar [options]='calendarOptions'>
+                  </full-calendar>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { CdkDragDrop, moveItemInArray } from "@angular/cdk/drag-drop";
 import {
   ChartComponent,
   ApexAxisChartSeries,
@@ -13,7 +13,7 @@ import {
   ApexLegend,
   ApexNonAxisChartSeries,
   ApexFill,
-} from 'ng-apexcharts';
+} from "ng-apexcharts";
 export type areaChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
@@ -48,12 +48,12 @@ export type radialChartOptions = {
   plotOptions: ApexPlotOptions;
 };
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.sass'],
+  selector: "app-dashboard",
+  templateUrl: "./dashboard.component.html",
+  styleUrls: ["./dashboard.component.sass"],
 })
 export class DashboardComponent implements OnInit {
-  @ViewChild('chart') chart: ChartComponent;
+  @ViewChild("chart") chart: ChartComponent;
   public areaChartOptions: Partial<areaChartOptions>;
   public radialChartOptions: Partial<radialChartOptions>;
   public linechartOptions: Partial<linechartOptions>;
@@ -62,64 +62,64 @@ export class DashboardComponent implements OnInit {
   // TODO start
   tasks = [
     {
-      id: '1',
-      title: 'Check patient report',
+      id: "1",
+      title: "Check patient report",
       done: true,
-      priority: 'High',
+      priority: "High",
     },
     {
-      id: '2',
-      title: 'Request for festivle holiday',
+      id: "2",
+      title: "Request for festivle holiday",
       done: false,
-      priority: 'High',
+      priority: "High",
     },
     {
-      id: '3',
-      title: 'Order new medicine stock',
+      id: "3",
+      title: "Order new medicine stock",
       done: false,
-      priority: 'Low',
+      priority: "Low",
     },
     {
-      id: '4',
-      title: 'Remind for lunch in hotel',
+      id: "4",
+      title: "Remind for lunch in hotel",
       done: true,
-      priority: 'Normal',
+      priority: "Normal",
     },
     {
-      id: '5',
-      title: 'Conference in london',
+      id: "5",
+      title: "Conference in london",
       done: false,
-      priority: 'High',
+      priority: "High",
     },
     {
-      id: '6',
-      title: 'Announcement for',
+      id: "6",
+      title: "Announcement for",
       done: false,
-      priority: 'Normal',
+      priority: "Normal",
     },
     {
-      id: '7',
-      title: 'call bus driver',
+      id: "7",
+      title: "call bus driver",
       done: true,
-      priority: 'High',
+      priority: "High",
     },
     {
-      id: '8',
-      title: 'Web service data load issue',
+      id: "8",
+      title: "Web service data load issue",
       done: false,
-      priority: 'High',
+      priority: "High",
     },
     {
-      id: '9',
-      title: 'Java compile error',
+      id: "9",
+      title: "Java compile error",
       done: false,
-      priority: 'Low',
+      priority: "Low",
     },
     {
-      id: '10',
-      title: 'Integrate project with spring boot',
+      id: "10",
+      title: "Integrate project with spring boot",
       done: true,
-      priority: 'High',
+      priority: "High",
     },
   ];
 
@@ -141,56 +141,56 @@ export class DashboardComponent implements OnInit {
     this.areaChartOptions = {
       series: [
         {
-          name: 'New Patients',
+          name: "New Patients",
           data: [31, 40, 28, 51, 42, 85, 77],
         },
         {
-          name: 'Old Patients',
+          name: "Old Patients",
           data: [11, 32, 45, 32, 34, 52, 41],
         },
       ],
       chart: {
         height: 350,
-        type: 'area',
+        type: "area",
         toolbar: {
           show: false,
         },
-        foreColor: '#9aa0ac',
+        foreColor: "#9aa0ac",
       },
-      colors: ['#7D4988', '#66BB6A'],
+      colors: ["#7D4988", "#66BB6A"],
       dataLabels: {
         enabled: false,
       },
       stroke: {
-        curve: 'smooth',
+        curve: "smooth",
       },
       xaxis: {
-        type: 'datetime',
+        type: "datetime",
         categories: [
-          '2018-09-19T00:00:00.000Z',
-          '2018-09-19T01:30:00.000Z',
-          '2018-09-19T02:30:00.000Z',
-          '2018-09-19T03:30:00.000Z',
-          '2018-09-19T04:30:00.000Z',
-          '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z',
+          "2018-09-19T00:00:00.000Z",
+          "2018-09-19T01:30:00.000Z",
+          "2018-09-19T02:30:00.000Z",
+          "2018-09-19T03:30:00.000Z",
+          "2018-09-19T04:30:00.000Z",
+          "2018-09-19T05:30:00.000Z",
+          "2018-09-19T06:30:00.000Z",
         ],
       },
       legend: {
         show: true,
-        position: 'top',
-        horizontalAlign: 'center',
+        position: "top",
+        horizontalAlign: "center",
         offsetX: 0,
         offsetY: 0,
       },
 
       tooltip: {
-        theme: 'dark',
+        theme: "dark",
         marker: {
           show: true,
         },
         x: {
-          format: 'dd/MM/yy HH:mm',
+          format: "dd/MM/yy HH:mm",
         },
       },
     };
@@ -200,50 +200,50 @@ export class DashboardComponent implements OnInit {
       series: [44, 55, 67],
       chart: {
         height: 265,
-        type: 'radialBar',
+        type: "radialBar",
       },
       plotOptions: {
         radialBar: {
           dataLabels: {
             name: {
-              fontSize: '22px',
+              fontSize: "22px",
             },
             value: {
-              fontSize: '16px',
+              fontSize: "16px",
             },
             total: {
               show: true,
-              label: 'Total',
+              label: "Total",
               formatter: function (w) {
-                return '249';
+                return "249";
               },
             },
           },
         },
       },
-      colors: ['#ffc107', '#3f51b5', '#8bc34a'],
+      colors: ["#ffc107", "#3f51b5", "#8bc34a"],
 
-      labels: ['Face TO Face', 'E-Consult', 'Available'],
+      labels: ["Face TO Face", "E-Consult", "Available"],
     };
   }
   private chart3() {
     this.linechartOptions = {
       series: [
         {
-          name: 'Male',
+          name: "Male",
           data: [44, 55, 57, 56, 61, 58],
         },
         {
-          name: 'Female',
+          name: "Female",
           data: [76, 85, 101, 98, 87, 105],
         },
       ],
       chart: {
-        type: 'bar',
+        type: "bar",
         height: 350,
         dropShadow: {
           enabled: true,
-          color: '#000',
+          color: "#000",
           top: 18,
           left: 7,
           blur: 10,
@@ -252,13 +252,13 @@ export class DashboardComponent implements OnInit {
         toolbar: {
           show: false,
         },
-        foreColor: '#9aa0ac',
+        foreColor: "#9aa0ac",
       },
-      colors: ['#5C9FFB', '#AEAEAE'],
+      colors: ["#5C9FFB", "#AEAEAE"],
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: '55%',
+          columnWidth: "55%",
           borderRadius: 5,
         },
       },
@@ -268,17 +268,17 @@ export class DashboardComponent implements OnInit {
       stroke: {
         show: true,
         width: 2,
-        colors: ['transparent'],
+        colors: ["transparent"],
       },
       xaxis: {
-        categories: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        categories: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       },
       yaxis: {},
       fill: {
         opacity: 1,
       },
       tooltip: {
-        theme: 'dark',
+        theme: "dark",
         marker: {
           show: true,
         },

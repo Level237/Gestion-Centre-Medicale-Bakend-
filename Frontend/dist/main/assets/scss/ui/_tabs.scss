@@ -1,0 +1,29 @@
+.example-small-box,
+.example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-small-box {
+  height: 100px;
+  width: 100px;
+}
+
+.example-large-box {
+  height: 300px;
+  width: 300px;
+}
+.appointment-tab-box {
+  background-color: #eff1f7;
+  width: 100%;
+  padding: 10px;
+}
+.tab-header {
+  color: #555;
+  padding: 15px;
+  position: relative;
+}

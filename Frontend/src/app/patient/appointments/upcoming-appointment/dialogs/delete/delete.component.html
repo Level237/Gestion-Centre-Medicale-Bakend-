@@ -1,0 +1,24 @@
+<div class="container">
+  <h3 mat-dialog-title>Are you sure?</h3>
+  <div mat-dialog-content>
+    <ul class="clearfix">
+      <li>
+        <p><span class="font-weight-bold"> Name: </span>{{data.doctor}}</p>
+      </li>
+      <li>
+        <p><span class="font-weight-bold"> Email: </span>{{ data.email }}</p>
+      </li>
+      <li>
+        <p>
+          <span class="font-weight-bold">Mobile: </span>{{data.mobile}}
+        </p>
+      </li>
+    </ul>
+  </div>
+  <div mat-dialog-actions class="mb-1">
+    <button mat-flat-button color="warn" [mat-dialog-close]="1" (click)="confirmDelete()">
+      Delete
+    </button>
+    <button mat-flat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+  </div>
+</div>

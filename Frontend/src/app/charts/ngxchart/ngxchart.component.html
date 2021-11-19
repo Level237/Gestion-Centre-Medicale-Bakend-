@@ -1,0 +1,124 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">NgxChart</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">Charts</a>
+            </li>
+            <li class="breadcrumb-item active">NgxChart</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <!-- Bar Chart -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>BAR CHART</h2>
+
+          </div>
+          <div class="card-body">
+            <div style="height: 400px">
+              <ngx-charts-bar-vertical [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+                [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [legendPosition]="legendPosition"
+                [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="vbarxAxisLabel"
+                [yAxisLabel]="vbaryAxisLabel">
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #END# Bar Chart -->
+    </div>
+    <div class="row clearfix">
+      <!-- horizonal Bar Chart -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>HORIZONTAL BAR CHART</h2>
+
+          </div>
+          <div class="body">
+            <div style="height: 400px">
+              <ngx-charts-bar-horizontal [scheme]="colorScheme" [results]="single" [gradient]="gradient"
+                [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend" [legendPosition]="legendPosition"
+                [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="hbarxAxisLabel"
+                [yAxisLabel]="hbaryAxisLabel">
+              </ngx-charts-bar-horizontal>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #END# horizonal Bar Chart -->
+    </div>
+    <div class="row clearfix">
+      <!-- Line Chart -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>LINE CHART</h2>
+
+          </div>
+          <div class="body">
+            <div style="height: 400px">
+              <ngx-charts-line-chart [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+                [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="linexAxisLabel" [curve]="shapeChartCurve"
+                [yAxisLabel]="lineyAxisLabel" [autoScale]="autoScale" [timeline]="timeline">
+              </ngx-charts-line-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #END# Line Chart -->
+    </div>
+    <div class="row clearfix">
+      <!-- Area Chart -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>AREA CHART</h2>
+
+          </div>
+          <div class="body">
+            <div style="height: 400px">
+              <ngx-charts-area-chart [scheme]="colorScheme" [results]="multi" [gradient]="gradient" [xAxis]="showXAxis"
+                [yAxis]="showYAxis" [legend]="showLegend" [showXAxisLabel]="showXAxisLabel"
+                [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="areaxAxisLabel" [yAxisLabel]="areayAxisLabel"
+                [curve]="shapeChartCurve" [autoScale]="autoScale">
+              </ngx-charts-area-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #END# Area Chart -->
+      <!-- Pie Chart -->
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>PIE CHART</h2>
+
+          </div>
+          <div class="body">
+            <div style="height: 400px">
+              <ngx-charts-pie-chart [scheme]="colorScheme" [results]="single" [legend]="showLegend"
+                [labels]="showLabels" [gradient]="gradient">
+              </ngx-charts-pie-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #END# Pie Chart -->
+    </div>
+  </div>
+</section>

@@ -1,0 +1,1 @@
+{"version":3,"file":"ng-apexcharts.module.d.ts","sources":["ng-apexcharts.module.d.ts"],"names":[],"mappings":";;AAAA;AACA;AACA;AACA;AACA;AACA;;;;AACA","sourcesContent":["declare global {\n    interface Window {\n        ApexCharts: any;\n    }\n}\nexport declare class NgApexchartsModule {\n}\n"]}

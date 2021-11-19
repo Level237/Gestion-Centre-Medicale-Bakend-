@@ -1,0 +1,97 @@
+<div class="addContainer">
+  <div class="modalHeader">
+    <div class="editRowModal">
+      <div class="modalHeader clearfix">
+        <img [src]='room.img' alt="avatar">
+        <div class="modal-about">
+          <div class="font-weight-bold p-t-5 msl-3 font-17">
+            {{dialogTitle}}</div>
+        </div>
+      </div>
+    </div>
+    <button mat-icon-button (click)="dialogRef.close()" aria-label="Close dialog">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <div mat-dialog-content>
+    <form class="register-form m-4" [formGroup]="roomForm" (ngSubmit)="submit">
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Room No</mat-label>
+            <input matInput formControlName="rNo" required>
+            <mat-icon matSuffix>assignment</mat-icon>
+            <mat-error *ngIf="roomForm.get('rNo').hasError('required')">
+              Room no is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Patient Name</mat-label>
+            <input matInput formControlName="pName" required>
+            <mat-icon matSuffix>face</mat-icon>
+            <mat-error *ngIf="roomForm.get('pName').hasError('required')">
+              Patient Name is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Room Type</mat-label>
+            <input matInput formControlName="rType" required>
+            <mat-icon matSuffix>store</mat-icon>
+            <mat-error *ngIf="roomForm.get('rType').hasError('required')">
+              Room type is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Sex</mat-label>
+            <input matInput formControlName="sex" required>
+            <mat-icon matSuffix>supervisor_account</mat-icon>
+            <mat-error *ngIf="roomForm.get('sex').hasError('required')">
+              Sex is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Admit date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="admitDate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="roomForm.get('admitDate').hasError('required')">
+              Please select Admit date
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-2">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Discharge date</mat-label>
+            <input matInput [matDatepicker]="pickerTo" formControlName="dischargeDate">
+            <mat-datepicker-toggle matSuffix [for]="pickerTo"></mat-datepicker-toggle>
+            <mat-datepicker #pickerTo></mat-datepicker>
+            <mat-error *ngIf="roomForm.get('dischargeDate').hasError('required')">
+              Please select Discharge date
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mb-2">
+          <div class="example-button-row">
+            <button mat-raised-button color="primary" [type]="submit" [disabled]="!roomForm.valid"
+              [mat-dialog-close]="1" (click)="confirmAdd()">Save</button>
+            <button mat-raised-button color="warn" (click)="onNoClick()" tabindex="-1">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

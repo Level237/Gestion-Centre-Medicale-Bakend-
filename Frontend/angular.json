@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularlight": {
+    "cliniva": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -33,10 +33,7 @@
               "crossvent",
               "apexcharts"
             ],
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/assets/scss/style.scss",
               "src/assets/scss/theme/all-themes.scss",
@@ -75,18 +72,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularlight:build"
+            "browserTarget": "cliniva:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularlight:build:production"
+              "browserTarget": "cliniva:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularlight:build"
+            "browserTarget": "cliniva:build"
           }
         },
         "test": {
@@ -113,7 +110,7 @@
         }
       }
     },
-    "angularlight-e2e": {
+    "cliniva-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -122,11 +119,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularlight:serve"
+            "devServerTarget": "cliniva:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularlight:serve:production"
+              "devServerTarget": "cliniva:serve:production"
             }
           }
         },
@@ -140,7 +137,7 @@
       }
     }
   },
-  "defaultProject": "angularlight",
+  "defaultProject": "cliniva",
   "cli": {
     "analytics": false
   }

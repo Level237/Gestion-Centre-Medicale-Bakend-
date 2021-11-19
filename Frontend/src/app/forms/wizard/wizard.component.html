@@ -1,0 +1,137 @@
+<section class="content">
+  <div class="container-fluid">
+    <div class="block-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <ul class="breadcrumb breadcrumb-style ">
+            <li class="breadcrumb-item">
+              <h4 class="page-title">Form Wizard</h4>
+            </li>
+            <li class="breadcrumb-item bcrumb-1">
+              <a routerLink="/admin/dashboard/main">
+                <i class="fas fa-home"></i> Home</a>
+            </li>
+            <li class="breadcrumb-item bcrumb-2">
+              <a href="#" onClick="return false;">Forms</a>
+            </li>
+            <li class="breadcrumb-item active">Wizard</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Stepper Horizontal</strong>
+            </h2>
+          </div>
+          <div class="body">
+            <mat-horizontal-stepper [linear]="isLinear" #stepper>
+              <mat-step [stepControl]="HFormGroup1">
+                <form [formGroup]="HFormGroup1">
+                  <ng-template matStepLabel>Fill out your name</ng-template>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" required>
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" required>
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button matStepperNext color="primary"
+                      [disabled]="!HFormGroup1.valid">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="HFormGroup2">
+                <form [formGroup]="HFormGroup2">
+                  <ng-template matStepLabel>Fill out your address</ng-template>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="address" placeholder="Ex. 1 Main St, New York, NY"
+                      required></textarea>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button matStepperPrevious color="warn" class="msr-2">Back</button>
+                    <button mat-raised-button matStepperNext color="primary"
+                      [disabled]="!HFormGroup2.valid">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                  <button mat-raised-button matStepperPrevious color="warn" class="msr-2">Back</button>
+                  <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+                </div>
+              </mat-step>
+            </mat-horizontal-stepper>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+          <div class="header">
+            <h2>
+              <strong>Stepper Verticle</strong>
+            </h2>
+          </div>
+          <div class="body">
+            <mat-vertical-stepper [linear]="isLinear" #stepper>
+              <mat-step [stepControl]="VFormGroup1">
+                <form [formGroup]="VFormGroup1">
+                  <ng-template matStepLabel>Fill out your name</ng-template>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstName" required>
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName" required>
+                    <mat-icon matSuffix>face</mat-icon>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button matStepperNext color="primary"
+                      [disabled]="!VFormGroup1.valid">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step [stepControl]="VFormGroup2">
+                <form [formGroup]="VFormGroup2">
+                  <ng-template matStepLabel>Fill out your address</ng-template>
+                  <mat-form-field class="example-full-width" appearance="outline">
+                    <mat-label>Address</mat-label>
+                    <textarea matInput formControlName="address" placeholder="Ex. 1 Main St, New York, NY"
+                      required></textarea>
+                  </mat-form-field>
+                  <div>
+                    <button mat-raised-button matStepperPrevious color="warn" class="msr-2">Back</button>
+                    <button mat-raised-button matStepperNext color="primary"
+                      [disabled]="!VFormGroup2.valid">Next</button>
+                  </div>
+                </form>
+              </mat-step>
+              <mat-step>
+                <ng-template matStepLabel>Done</ng-template>
+                <p>You are now done.</p>
+                <div>
+                  <button mat-raised-button matStepperPrevious color="warn" class="msr-2">Back</button>
+                  <button mat-raised-button color="primary" (click)="stepper.reset()">Reset</button>
+                </div>
+              </mat-step>
+            </mat-vertical-stepper>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

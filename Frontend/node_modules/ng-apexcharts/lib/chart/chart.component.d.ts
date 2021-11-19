@@ -1,0 +1,57 @@
+import { OnChanges, OnInit, OnDestroy, SimpleChanges } from "@angular/core";
+import { ApexAnnotations, ApexAxisChartSeries, ApexChart, ApexDataLabels, ApexFill, ApexGrid, ApexLegend, ApexNonAxisChartSeries, ApexMarkers, ApexNoData, ApexPlotOptions, ApexResponsive, ApexStates, ApexStroke, ApexTheme, ApexTitleSubtitle, ApexTooltip, ApexXAxis, ApexYAxis } from "../model/apex-types";
+import * as ɵngcc0 from '@angular/core';
+export declare class ChartComponent implements OnInit, OnChanges, OnDestroy {
+    chart: ApexChart;
+    annotations: ApexAnnotations;
+    colors: any[];
+    dataLabels: ApexDataLabels;
+    series: ApexAxisChartSeries | ApexNonAxisChartSeries;
+    stroke: ApexStroke;
+    labels: string[];
+    legend: ApexLegend;
+    markers: ApexMarkers;
+    noData: ApexNoData;
+    fill: ApexFill;
+    tooltip: ApexTooltip;
+    plotOptions: ApexPlotOptions;
+    responsive: ApexResponsive[];
+    xaxis: ApexXAxis;
+    yaxis: ApexYAxis | ApexYAxis[];
+    grid: ApexGrid;
+    states: ApexStates;
+    title: ApexTitleSubtitle;
+    subtitle: ApexTitleSubtitle;
+    theme: ApexTheme;
+    autoUpdateSeries: boolean;
+    private chartElement;
+    private chartObj;
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    ngOnDestroy(): void;
+    private createElement;
+    render(): Promise<void>;
+    updateOptions(options: any, redrawPaths?: boolean, animate?: boolean, updateSyncedCharts?: boolean): Promise<void>;
+    updateSeries(newSeries: ApexAxisChartSeries | ApexNonAxisChartSeries, animate?: boolean): void;
+    appendSeries(newSeries: ApexAxisChartSeries | ApexNonAxisChartSeries, animate?: boolean): void;
+    appendData(newData: any[]): void;
+    toggleSeries(seriesName: string): any;
+    showSeries(seriesName: string): void;
+    hideSeries(seriesName: string): void;
+    resetSeries(): void;
+    zoomX(min: number, max: number): void;
+    toggleDataPointSelection(seriesIndex: number, dataPointIndex?: number): void;
+    destroy(): void;
+    setLocale(localeName?: string): void;
+    paper(): void;
+    addXaxisAnnotation(options: any, pushToMemory?: boolean, context?: any): void;
+    addYaxisAnnotation(options: any, pushToMemory?: boolean, context?: any): void;
+    addPointAnnotation(options: any, pushToMemory?: boolean, context?: any): void;
+    removeAnnotation(id: string, options?: any): void;
+    clearAnnotations(options?: any): void;
+    dataURI(): Promise<void>;
+    static ɵfac: ɵngcc0.ɵɵFactoryDeclaration<ChartComponent, never>;
+    static ɵcmp: ɵngcc0.ɵɵComponentDeclaration<ChartComponent, "apx-chart", never, { "autoUpdateSeries": "autoUpdateSeries"; "chart": "chart"; "annotations": "annotations"; "colors": "colors"; "dataLabels": "dataLabels"; "series": "series"; "stroke": "stroke"; "labels": "labels"; "legend": "legend"; "markers": "markers"; "noData": "noData"; "fill": "fill"; "tooltip": "tooltip"; "plotOptions": "plotOptions"; "responsive": "responsive"; "xaxis": "xaxis"; "yaxis": "yaxis"; "grid": "grid"; "states": "states"; "title": "title"; "subtitle": "subtitle"; "theme": "theme"; }, {}, never, never>;
+}
+
+//# sourceMappingURL=chart.component.d.ts.map
