@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Ordonance;
+
 class OrdonanceController extends Controller
 {
     /**
@@ -14,6 +16,7 @@ class OrdonanceController extends Controller
     public function index()
     {
         //
+       return  Ordonance::all();
     }
 
     /**

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\doctor;
 
 class DoctorController extends Controller
 {
@@ -14,6 +15,7 @@ class DoctorController extends Controller
     public function index()
     {
         //
+        return doctor::all();
     }
 
     /**
