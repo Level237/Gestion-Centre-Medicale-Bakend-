@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Appointment extends Model
 {
     use HasFactory;
+    private $table='Appointments';
+
+    private $fillable=[
+        'enum'
+    ];
 }

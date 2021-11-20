@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Ordonance extends Model
 {
     use HasFactory;
+
+    private $table='Ordonance';
+
+    private $fillable=[
+        'name',
+        'composition'
+    ];
 }

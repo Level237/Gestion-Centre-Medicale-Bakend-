@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
+
+    private $table='room';
+
+    private $fillable=[
+        'name',
+        'libelle',
+        'type'
+    ];
 }
