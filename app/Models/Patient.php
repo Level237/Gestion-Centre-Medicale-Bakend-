@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Appointment;
 
 class Patient extends Model
 {
@@ -18,4 +19,8 @@ class Patient extends Model
         'adress',
         'phone'
     ];
+
+    public function appointments(){
+        return $this->belongsToMany(Appointment::class);
+    }
 }
