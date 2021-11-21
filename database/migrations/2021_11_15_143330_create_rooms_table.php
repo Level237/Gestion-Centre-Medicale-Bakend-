@@ -15,9 +15,16 @@ class CreateRoomsTable extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('Romms_type_id');
+            $table->foreign('rooms_type_id')
+            ->references('id')
+            ->on('rooms_type')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+
             $table->string('name');
             $table->string('libellé');
-            $table->enum('type',['Consultation','Rendez-vous','Vaccination']);
+            $table->text('description');
             $table->timestamps();
         });
     }
