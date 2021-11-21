@@ -23,6 +23,14 @@ class CreateRoomsTable extends Migration
             ->onUpdate('restrict');
             Schema::disableForeignKeyConstraints();
 
+            $table->unsignedBigInteger('personnel_id');
+            $table->foreign('personnel_id')
+            ->references('id')
+            ->on('personnel')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+            Schema::disableForeignKeyConstraints();
+
             $table->string('name');
             $table->string('libellé');
             $table->text('description');

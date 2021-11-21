@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Role;
+use App\Models\Room;
 
 class Personnel extends Model
 {
@@ -12,6 +13,7 @@ class Personnel extends Model
     private $table="personnel";
     private $fillable=[
         'nom',
+        'Role_id',
         'phone',
         'email',
         'date_naissance',
@@ -27,4 +29,8 @@ class Personnel extends Model
     public function Role(){
         return $this->belongTo(Role::class);
     }
+    public function Rooms(){
+        return $this->hasMany(Room::class);
+    }
+
 }
