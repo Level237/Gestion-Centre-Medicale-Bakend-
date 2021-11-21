@@ -15,6 +15,21 @@ class CreatePersonnelConsultationTable extends Migration
     {
         Schema::create('personnel_consultation', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('personnel_id');
+            $table->foreign('personnel_id')
+            ->references('id')
+            ->on('personnel')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+            $table->unsignedBigInteger('consultation_id');
+            $table->foreign('consultation_id')
+            ->references('id')
+            ->on('consultation')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
             $table->timestamps();
         });
     }
