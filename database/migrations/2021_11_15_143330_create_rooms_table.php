@@ -15,12 +15,13 @@ class CreateRoomsTable extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Romms_type_id');
-            $table->foreign('rooms_type_id')
+            $table->unsignedBigInteger('room_type_id');
+            $table->foreign('room_type_id')
             ->references('id')
             ->on('rooms_type')
             ->onDelete('restrict')
             ->onUpdate('restrict');
+            Schema::disableForeignKeyConstraints();
 
             $table->string('name');
             $table->string('libellé');

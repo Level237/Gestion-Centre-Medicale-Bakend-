@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\room_type;
 
 class Room extends Model
 {
@@ -16,4 +17,8 @@ class Room extends Model
         'libelle',
         'type'
     ];
+
+    public function rommtype(){
+        return $this->belongsTo(room_type::class);
+    }
 }
