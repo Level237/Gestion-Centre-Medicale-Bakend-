@@ -5,17 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Personnel;
-class Consultation extends Model
+
+class Role extends Model
 {
     use HasFactory;
-    private $table="Consultation";
+
+    private $table="roles";
 
     private $fillable=[
-    'Observation',
-    'resultat'
+        'id',
+        'name',
+        'display_name'
     ];
 
-    public function personnels(){
-        return $this->belongsToMany(Personnel::class);
+    public function personnal(){
+        return $this->hasMany(Personnel::class);
     }
 }

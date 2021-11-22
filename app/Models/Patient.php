@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Appointment;
+use App\Models\Antecedent;
 
 class Patient extends Model
 {
@@ -18,4 +20,12 @@ class Patient extends Model
         'adress',
         'phone'
     ];
+
+    public function appointments(){
+        return $this->belongsToMany(Appointment::class);
+    }
+
+    public function Antecedents(){
+        return $this->belongsToMany(Antecedent::class);
+    }
 }

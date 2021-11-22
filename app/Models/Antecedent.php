@@ -5,21 +5,19 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Patient;
-use App\Models\Personnel;
-class Appointment extends Model
+
+class Antecedent extends Model
 {
     use HasFactory;
-    private $table='Appointments';
+
+    private $table="antecedents";
 
     private $fillable=[
-        'enum'
+        'description',
+        'nature'
     ];
 
     public function patients(){
         return $this->belongsToMany(Patient::class);
-    }
-
-    public function Personnel(){
-        return $this->belongsToMany(Personnel::class);
     }
 }

@@ -4,17 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Room;
 
-class nurse extends Model
+class room_type extends Model
 {
     use HasFactory;
-
-    private $table="nurses";
-
+    private $table='room_type';
     private $fillable=[
-        'name',
-        'email',
-        'address',
+        'id',
         'type'
     ];
+
+    public function rooms(){
+        return $this->hasMany(Room::class);
+    }
 }
