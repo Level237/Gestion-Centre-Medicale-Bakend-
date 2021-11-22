@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Role;
 use App\Models\Room;
+use App\Models\Appointment;
 
 class Personnel extends Model
 {
@@ -35,6 +36,10 @@ class Personnel extends Model
 
     public function Consultations(){
         return $this->belongsToMany(Consultation::class);
+    }
+
+    public function Appointment(){
+        return $this->belongsToMany(Appointment::class);
     }
 
 }
