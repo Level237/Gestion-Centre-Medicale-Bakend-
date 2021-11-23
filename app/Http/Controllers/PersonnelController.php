@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Personnel;
 
 class PersonnelController extends Controller
 {
@@ -13,7 +14,8 @@ class PersonnelController extends Controller
      */
     public function index()
     {
-        //
+        return  Personnel::where("nom","balep")->orderBy('created_at')->take(2)->get();
+
     }
 
     /**

@@ -7,12 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Role;
 use App\Models\Room;
 use App\Models\Appointment;
+use App\Models\patient;
 
 class Personnel extends Model
 {
     use HasFactory;
-    private $table="personnel";
-    private $fillable=[
+    protected $table="personnel";
+    protected $dateFormat = 'U';
+    protected $casts = [
+        'created_at' => 'datetime:Y-m-d',
+    ];
+    
+    protected $fillable=[
         'nom',
         'Role_id',
         'phone',
@@ -24,8 +30,12 @@ class Personnel extends Model
         'adresse',
         'adresse',
         'situation_matrimoniale',
-        'nombre_enfant'
+        'nombre_enfant',
+        'created_at'
     ];
+    public function getcreated(){
+        return $this->created_at->format('d');
+    }
 
     public function Role(){
         return $this->belongTo(Role::class);
