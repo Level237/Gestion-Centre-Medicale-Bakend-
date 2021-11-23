@@ -42,4 +42,8 @@ class Personnel extends Model
         return $this->belongsToMany(Appointment::class);
     }
 
+    public function Patients(){
+        return $this->belongsToMany(Patient::class);
+    }
+
 }
