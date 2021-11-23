@@ -13,9 +13,9 @@ class CreateTablePersonnelAppointment extends Migration
      */
     public function up()
     {
-        Schema::create('table_personnel_appointment', function (Blueprint $table) {
+        Schema::create('personnel_appointment', function (Blueprint $table) {
             $table->id();
-            
+
             $table->unsignedBigInteger('personnel_id');
             $table->foreign('personnel_id')
             ->references('id')
@@ -26,9 +26,10 @@ class CreateTablePersonnelAppointment extends Migration
             $table->unsignedBigInteger('appointment_id');
             $table->foreign('appointment_id')
             ->references('id')
+            ->on('appointment')
             ->onDelete('cascade')
             ->onUpdate('cascade');
-            
+
             $table->timestamps();
         });
     }

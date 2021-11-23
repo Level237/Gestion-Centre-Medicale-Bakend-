@@ -28,4 +28,8 @@ class Patient extends Model
     public function Antecedents(){
         return $this->belongsToMany(Antecedent::class);
     }
+
+    public function Personnel(){
+        return $this->belongsToMany(Personnel::class);
+    }
 }

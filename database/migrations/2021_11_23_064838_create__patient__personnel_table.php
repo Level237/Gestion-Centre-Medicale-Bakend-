@@ -13,8 +13,24 @@ class CreatePatientPersonnelTable extends Migration
      */
     public function up()
     {
-        Schema::create('_patient__personnel', function (Blueprint $table) {
+        Schema::create('patient__personnel', function (Blueprint $table) {
             $table->id();
+
+            $table->unsignedBigInteger('personnel_id');
+            $table->foreign('personnel_id')
+            ->references('id')
+            ->on('personnel')
+            ->onUpdate('cascade')
+            ->onUpdate('cascade');
+
+            $table->unsignedBigInteger('patient_id');
+            $table->foreign('patient_id')
+            ->references('id')
+            ->on('patient')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
+
+
             $table->timestamps();
         });
     }
