@@ -20,7 +20,7 @@ class CreatePatientPersonnelTable extends Migration
             $table->foreign('personnel_id')
             ->references('id')
             ->on('personnel')
-            ->onUpdate('cascade')
+            ->onDelete('cascade')
             ->onUpdate('cascade');
 
             $table->unsignedBigInteger('patient_id');

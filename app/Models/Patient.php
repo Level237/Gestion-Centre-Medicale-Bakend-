@@ -11,9 +11,9 @@ class Patient extends Model
 {
     use HasFactory;
 
-    private $table='patients';
+    protected $table='patients';
 
-    private $fillable=[
+    protected $fillable=[
         'name',
         'email',
         'sexe',
