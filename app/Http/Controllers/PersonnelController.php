@@ -14,7 +14,7 @@ class PersonnelController extends Controller
      */
     public function index()
     {
-        return  Personnel::where("nom","balep")->orderBy('created_at')->take(2)->get();
+        return  Personnel::where("created_at->format('d')",now()->format('d'))->count();
 
     }
 
