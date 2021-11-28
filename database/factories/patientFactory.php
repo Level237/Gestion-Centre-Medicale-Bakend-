@@ -34,7 +34,7 @@ class patientFactory extends Factory
             'ville'=>$this->faker->city(),
             'quartier'=>$this->faker->streetName(),
             'adresse'=>$this->faker->address(),
-            'number'=>$this->faker->phoneNumber
+            'number'=>$this->faker->phoneNumber()
         ];
     }
 }

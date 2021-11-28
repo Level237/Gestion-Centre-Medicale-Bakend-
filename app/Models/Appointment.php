@@ -9,10 +9,11 @@ use App\Models\Personnel;
 class Appointment extends Model
 {
     use HasFactory;
-    private $table='Appointments';
+    protected $table='Appointments';
 
-    private $fillable=[
-        'enum'
+    protected $fillable=[
+
+        'type'
     ];
 
     public function patients(){
