@@ -11,9 +11,9 @@ class Room extends Model
 {
     use HasFactory;
 
-    private $table='room';
+    protected $table='rooms';
 
-    private $fillable=[
+    protected $fillable=[
         'name',
         'libelle',
         'room_id',

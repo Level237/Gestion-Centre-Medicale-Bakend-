@@ -32,7 +32,7 @@ class CreateRoomsTable extends Migration
             Schema::disableForeignKeyConstraints();
 
             $table->string('name');
-            $table->string('libellé');
+            $table->string('libellé')->unique();
             $table->text('description');
             $table->timestamps();
         });

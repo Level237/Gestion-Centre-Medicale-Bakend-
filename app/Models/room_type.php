@@ -9,8 +9,8 @@ use App\Models\Room;
 class room_type extends Model
 {
     use HasFactory;
-    private $table='room_type';
-    private $fillable=[
+    protected $table='rooms_type';
+    protected  $fillable=[
         'id',
         'type'
     ];
