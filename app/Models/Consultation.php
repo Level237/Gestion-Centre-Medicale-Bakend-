@@ -8,9 +8,9 @@ use App\Models\Personnel;
 class Consultation extends Model
 {
     use HasFactory;
-    private $table="Consultation";
+    protected $table="consultations";
 
-    private $fillable=[
+    protected $fillable=[
     'Observation',
     'resultat'
     ];

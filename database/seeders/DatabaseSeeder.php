@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,6 +13,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        \App\Models\Patient::factory(10)->create();
+        \App\Models\Appointment::factory(10)->create();
+        \App\Models\Consultation::factory(10)->create();
+        \App\Models\Ordonance::factory(10)->create();
         \App\Models\Role::create(
             [
                 'id' => '1',
@@ -26,7 +29,7 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => '2',
                 'name' => 'admin',
-                'display_name' =>'Administrateur' 
+                'display_name' =>'Administrateur'
             ]
         );
 
@@ -34,12 +37,12 @@ class DatabaseSeeder extends Seeder
             [
                 'id' => '3',
                 'name' => 'infimiere',
-                'display_name' =>'Infimiere' 
+                'display_name' =>'Infimiere'
             ]
         );
 
-        
 
-        
+
+
     }
 }

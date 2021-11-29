@@ -9,10 +9,10 @@ class Ordonance extends Model
 {
     use HasFactory;
 
-    private $table='Ordonance';
+    protected $table='ordonances';
 
-    private $fillable=[
-        'name',
+    protected $fillable=[
+        'type',
         'composition'
     ];
 }

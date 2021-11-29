@@ -17,8 +17,15 @@ class Patient extends Model
         'name',
         'email',
         'sexe',
-        'adress',
-        'phone'
+        'date_naissance',
+        'age',
+        'lieu_naissance',
+        'groupe_sanguin',
+        'rhesus',
+        'ville',
+        'quartier',
+        'adresse',
+        'number'
     ];
 
     public function appointments(){
