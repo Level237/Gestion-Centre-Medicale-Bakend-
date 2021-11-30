@@ -25,7 +25,7 @@ class Personnel extends Migration
             ->onUpdate('restrict');
 
             $table->string('nom');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('email');
             $table->date('date_naissance');
             $table->string('lieu_naissance');
@@ -36,7 +36,7 @@ class Personnel extends Migration
             $table->integer('nombre_enfant');
             $table->timestamps();
 
-            
+
         });
     }
 
