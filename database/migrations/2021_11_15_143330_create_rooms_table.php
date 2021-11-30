@@ -26,7 +26,7 @@ class CreateRoomsTable extends Migration
             $table->unsignedBigInteger('personnel_id');
             $table->foreign('personnel_id')
             ->references('id')
-            ->on('personnel')
+            ->on('personnels')
             ->onDelete('restrict')
             ->onUpdate('restrict');
             Schema::disableForeignKeyConstraints();

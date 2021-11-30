@@ -14,10 +14,11 @@ class Room extends Model
     protected $table='rooms';
 
     protected $fillable=[
+        'room_type_id',
+        'personnel_id',
         'name',
         'libelle',
-        'room_id',
-        'personnel_id'
+
     ];
 
     public function rommtype(){

@@ -12,12 +12,7 @@ use App\Models\patient;
 class Personnel extends Model
 {
     use HasFactory;
-    protected $table="personnel";
-    protected $dateFormat = 'U';
-    protected $casts = [
-        'created_at' => 'datetime:Y-m-d',
-    ];
-    
+    protected $table="personnels";
     protected $fillable=[
         'nom',
         'Role_id',
@@ -30,12 +25,8 @@ class Personnel extends Model
         'adresse',
         'adresse',
         'situation_matrimoniale',
-        'nombre_enfant',
-        'created_at'
+        'nombre_enfant'
     ];
-    public function getcreated(){
-        return $this->created_at->format('d');
-    }
 
     public function Role(){
         return $this->belongTo(Role::class);
@@ -57,3 +48,6 @@ class Personnel extends Model
     }
 
 }
+
+
+

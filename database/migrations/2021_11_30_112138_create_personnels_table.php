@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Personnel extends Migration
+class CreatePersonnelsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,19 @@ class Personnel extends Migration
      */
     public function up()
     {
-        Schema::create('personnel', function (Blueprint $table) {
+        Schema::create('personnels', function (Blueprint $table) {
             $table->id();
 
             Schema::disableForeignKeyConstraints();
             $table->unsignedBigInteger('Role_id');
             $table->foreign('Role_id')
             ->references('id')
-            ->on('Roles')
+            ->on('roles')
             ->onDelete('restrict')
             ->onUpdate('restrict');
 
             $table->string('nom');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('email');
             $table->date('date_naissance');
             $table->string('lieu_naissance');
@@ -35,8 +35,6 @@ class Personnel extends Migration
             $table->string('situation_matrimoniale');
             $table->integer('nombre_enfant');
             $table->timestamps();
-
-            
         });
     }
 
@@ -47,6 +45,6 @@ class Personnel extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('personnels');
     }
 }
