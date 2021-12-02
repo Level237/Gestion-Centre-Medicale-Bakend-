@@ -29,7 +29,7 @@ class Personnel extends Model
     ];
 
     public function Role(){
-        return $this->belongTo(Role::class);
+        return $this->belongsToMany(Role::class);
     }
     public function Rooms(){
         return $this->hasMany(Room::class);

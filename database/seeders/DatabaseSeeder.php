@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use App\Models\{Personnel, Role, Room,room_type};
+use Database\Seeders\PersonnelSeeder;
 class DatabaseSeeder extends Seeder
 {
     /**

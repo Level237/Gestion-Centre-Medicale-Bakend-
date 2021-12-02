@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Personnel;
 class PersonnelSeeder extends Seeder
 {
     /**
@@ -13,6 +13,13 @@ class PersonnelSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Personnel::factory(10)->create();
+        $personnel=\App\Models\Personnel::factory(10)->create();
+
+        $personnel->each(function($personnel){
+
+            \App\Models\Role::factory(2)->create([
+                'personnel_id'=>$personnel->id
+            ]);
+        });
     }
 }
