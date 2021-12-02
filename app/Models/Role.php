@@ -19,6 +19,6 @@ class Role extends Model
     ];
 
     public function personnel(){
-        return $this->hasMany(Personnel::class);
+        return $this->belongsToMany(Personnel::class);
     }
 }

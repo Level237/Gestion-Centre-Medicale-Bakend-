@@ -16,13 +16,8 @@ class CreatePersonnelsTable extends Migration
         Schema::create('personnels', function (Blueprint $table) {
             $table->id();
 
-            Schema::disableForeignKeyConstraints();
-            $table->unsignedBigInteger('Role_id');
-            $table->foreign('Role_id')
-            ->references('id')
-            ->on('roles')
-            ->onDelete('restrict')
-            ->onUpdate('restrict');
+
+
 
             $table->string('nom');
             $table->string('phone');
