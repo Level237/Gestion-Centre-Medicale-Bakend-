@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 
-class PersonnelSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +13,6 @@ class PersonnelSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Personnel::factory(10)->create();
+        //
     }
 }
