@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Personnel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PersonnelFactory extends Factory
@@ -14,6 +15,7 @@ class PersonnelFactory extends Factory
     public function definition()
     {
         return [
+            'Role_id'=>rand(1,20),
             'nom'=>$this->faker->name(),
             'phone'=>$this->faker->phoneNumber(),
             'email'=>$this->faker->safeEmail(),

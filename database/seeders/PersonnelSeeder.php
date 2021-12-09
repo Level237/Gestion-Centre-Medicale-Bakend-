@@ -13,13 +13,18 @@ class PersonnelSeeder extends Seeder
      */
     public function run()
     {
-        $personnel=\App\Models\Personnel::factory(10)->create();
 
-        $personnel->each(function($personnel){
+        // $ids = range(1, 10);
 
-            \App\Models\Role::factory(2)->create([
-                'personnel_id'=>$personnel->id
-            ]);
-        });
+        // \App\Models\Personnel::factory()->count(40)->create()->each(function ($personnel) use ($ids){
+        //    shuffle($ids);
+          //  $personnel->Role()->attach(array_slice($ids,0,rand(1,4)));
+       // });
+
+        \App\Models\Role::factory()
+        ->has(\App\Models\Personnel::factory()->count(4))
+        ->count(10)
+        ->create();
+        \App\Models\Personnel::factory()->count(20)->create();
     }
 }

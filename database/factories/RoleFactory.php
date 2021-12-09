@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RoleFactory extends Factory
@@ -14,8 +15,8 @@ class RoleFactory extends Factory
     public function definition()
     {
         return [
-                'name' =>$this->faker->randomElement($array=['docteur','infimiere'],$count=1),
-                'display_name' =>$this->faker->word()
+                'name' =>$this->faker->word(),
+                'display_name' =>$this->faker->text()
         ];
     }
 }
