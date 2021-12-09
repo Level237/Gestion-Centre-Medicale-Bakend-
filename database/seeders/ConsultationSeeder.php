@@ -13,6 +13,6 @@ class ConsultationSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Consultation::factory()->count(10)->create();
     }
 }
