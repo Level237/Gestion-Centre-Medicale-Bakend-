@@ -14,8 +14,8 @@ class Personnel extends Model
     use HasFactory;
     protected $table="personnels";
     protected $fillable=[
-        'nom',
         'Role_id',
+        'nom',
         'phone',
         'email',
         'date_naissance',
@@ -29,7 +29,7 @@ class Personnel extends Model
     ];
 
     public function Role(){
-        return $this->belongsToMany(Role::class);
+        return $this->hasMany(Role::class);
     }
     public function Rooms(){
         return $this->hasMany(Room::class);
