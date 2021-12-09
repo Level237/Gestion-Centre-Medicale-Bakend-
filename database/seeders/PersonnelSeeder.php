@@ -35,5 +35,14 @@ class PersonnelSeeder extends Seeder
             shuffle($ids);
             $personnel->Patients()->attach(array_slice($ids,0,rand(1,4)));
         });
+
+        //Relationship between the personal table and the Appointment table
+
+        $ids=range(1,10);
+
+        \App\Models\Personnel::factory()->count(40)->create()->each(function ($personnel)use ($ids){
+            shuffle($ids);
+            $personnel->Appointment()->attach(array_slice($ids,0,rand(1,4)));
+        });
     }
 }
