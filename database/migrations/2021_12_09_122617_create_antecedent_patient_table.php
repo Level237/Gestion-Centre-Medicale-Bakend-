@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAntecedantPatientTable extends Migration
+class CreateAntecedentPatientTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateAntecedantPatientTable extends Migration
      */
     public function up()
     {
-        Schema::create('antecedant_patient', function (Blueprint $table) {
+        Schema::create('antecedent_patient', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('antecedent_id');
@@ -41,6 +41,6 @@ class CreateAntecedantPatientTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('antecedant_patient');
+        Schema::dropIfExists('antecedent_patient');
     }
 }
