@@ -18,6 +18,8 @@ class DatabaseSeeder extends Seeder
 
 
         $this->call([
+            AntecedentSeeder::class,
+            ConsultationSeeder::class,
             AppointmentSeeder::class,
             PatientSeeder::class,
             PersonnelSeeder::class

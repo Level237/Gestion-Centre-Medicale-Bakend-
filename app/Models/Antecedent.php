@@ -10,9 +10,9 @@ class Antecedent extends Model
 {
     use HasFactory;
 
-    private $table="antecedents";
+    protected $table="antecedents";
 
-    private $fillable=[
+    protected $fillable=[
         'description',
         'nature'
     ];

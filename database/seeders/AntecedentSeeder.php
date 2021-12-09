@@ -13,6 +13,6 @@ class AntecedentSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Antecedent::factory()->count(10)->create();
     }
 }
