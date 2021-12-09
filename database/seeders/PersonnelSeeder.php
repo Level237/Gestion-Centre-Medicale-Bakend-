@@ -26,5 +26,14 @@ class PersonnelSeeder extends Seeder
         ->count(10)
         ->create();
         \App\Models\Personnel::factory()->count(20)->create();
+
+        //Relationship between the personal table and the patient table
+
+        $ids=range(1,10);
+
+        \App\Models\Personnel::factory()->count(40)->create()->each(function ($personnel)use ($ids){
+            shuffle($ids);
+            $personnel->Patients()->attach(array_slice($ids,0,rand(1,4)));
+        });
     }
 }
