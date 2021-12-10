@@ -13,9 +13,8 @@ class CreateAppointmentPatientTable extends Migration
      */
     public function up()
     {
-        Schema::create('_appointment__patient', function (Blueprint $table) {
+        Schema::create('appointment_patient', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
 
             $table->unsignedBigInteger('Appointment_id');
             $table->foreign('Appointment_id')
@@ -27,9 +26,11 @@ class CreateAppointmentPatientTable extends Migration
             $table->unsignedBigInteger('patient_id');
             $table->foreign('patient_id')
             ->references('id')
-            ->on('Patients')
+            ->on('patients')
             ->onDelete('cascade')
             ->onUpdate('cascade');
+
+            $table->timestamps();
         });
     }
 
@@ -40,6 +41,6 @@ class CreateAppointmentPatientTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_appointment__patient');
+        Schema::dropIfExists('appointment_patient');
     }
 }

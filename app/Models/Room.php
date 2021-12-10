@@ -14,16 +14,14 @@ class Room extends Model
     protected $table='rooms';
 
     protected $fillable=[
-        'room_type_id',
         'personnel_id',
         'name',
+        'type',
         'libelle',
 
     ];
 
-    public function rommtype(){
-        return $this->belongsTo(room_type::class);
-    }
+
     public function personnel(){
         return $this->belongsTo(Personnel::class);
     }

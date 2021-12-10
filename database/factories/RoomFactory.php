@@ -15,6 +15,7 @@ class RoomFactory extends Factory
     {
         return [
             'name'=>$this->faker->text($maxNbChar=8),
+            'type'=>$this->faker->text($maxNbChar=20),
             'libellé'=>$this->faker->text($maxNbChar=8)
         ];
     }

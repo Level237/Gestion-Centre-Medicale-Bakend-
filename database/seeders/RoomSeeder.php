@@ -13,6 +13,6 @@ class RoomSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Room::factory()->count(10)->create();
     }
 }
