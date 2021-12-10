@@ -25,7 +25,8 @@ class PersonnelFactory extends Factory
             'quartier'=>$this->faker->streetName(),
             'adresse'=>$this->faker->address(),
             'situation_matrimoniale'=>$this->faker->randomElement($array=['Celibataire','Marié']),
-            'nombre_enfant'=>$this->faker->numberBetween($min=0,$max=10)
+            'nombre_enfant'=>$this->faker->numberBetween($min=0,$max=10),
+            'statut'=>$this->faker->randomElement($array=['libre','occupé'])
         ];
     }
 }

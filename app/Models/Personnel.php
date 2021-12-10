@@ -25,7 +25,8 @@ class Personnel extends Model
         'adresse',
         'adresse',
         'situation_matrimoniale',
-        'nombre_enfant'
+        'nombre_enfant',
+        'statut'
     ];
 
     public function Role(){
