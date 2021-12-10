@@ -13,6 +13,6 @@ class OrdonanceSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Ordonance::factory()->count(10)->create();
     }
 }

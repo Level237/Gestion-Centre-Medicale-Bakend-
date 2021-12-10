@@ -18,6 +18,8 @@ class Room extends Model
         'name',
         'type',
         'libelle',
+        'description',
+        'statut'
 
     ];
 

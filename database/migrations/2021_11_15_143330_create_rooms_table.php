@@ -28,6 +28,7 @@ class CreateRoomsTable extends Migration
             $table->string('type');
             $table->string('libellé')->unique();
             $table->text('description');
+            $table->string('statut');
             $table->timestamps();
         });
     }

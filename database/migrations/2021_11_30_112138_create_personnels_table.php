@@ -34,6 +34,7 @@ class CreatePersonnelsTable extends Migration
             $table->string('adresse');
             $table->string('situation_matrimoniale');
             $table->integer('nombre_enfant');
+            $table->string('statut');
             $table->timestamps();
         });
     }
