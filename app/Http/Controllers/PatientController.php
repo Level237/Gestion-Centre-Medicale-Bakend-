@@ -16,7 +16,8 @@ class PatientController extends Controller
     public function index()
     {
         //
-        return Patient::all();
+      // return Patient::all()->where('created_at','>',now()->subDay(1));
+	  return Patient::all();
     }
 
     /**
@@ -38,7 +39,7 @@ class PatientController extends Controller
      */
     public function show($id)
     {
-        //
+        return Patient::findOrFail($id);
     }
 
     /**
@@ -62,5 +63,7 @@ class PatientController extends Controller
     public function destroy($id)
     {
         //
+		$patient=Patient::findOrFail($id);
+		$patient->delete();
     }
 }

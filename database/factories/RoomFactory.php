@@ -15,9 +15,10 @@ class RoomFactory extends Factory
     {
         return [
             'personnel_id'=>rand(1,20),
+			'patient_id'=>rand(1,20),
             'name'=>$this->faker->text($maxNbChar=8),
             'type'=>$this->faker->text($maxNbChar=20),
-            'libellé'=>$this->faker->text($maxNbChar=8),
+           
             'description'=>$this->faker->text($maxNbChar=10),
             'statut'=>$this->faker->randomElement($array=['libre','occupé'])
         ];

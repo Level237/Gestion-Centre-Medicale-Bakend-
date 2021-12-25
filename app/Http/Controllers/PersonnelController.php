@@ -14,9 +14,14 @@ class PersonnelController extends Controller
      */
     public function index()
     {
-        return  Personnel::where("created_at->format('d')",now()->format('d'))->count();
+        //return  Personnel::where("created_at->format('d')",now()->format('d'))->count();
+		return Personnel::all();
 
     }
+	public function listdoctors(){
+		
+		return Personnel::where("role","docteur")->get();
+	}
 
     /**
      * Store a newly created resource in storage.

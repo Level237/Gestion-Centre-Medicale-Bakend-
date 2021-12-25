@@ -17,14 +17,9 @@ class CreatePersonnelsTable extends Migration
             $table->id();
 
             Schema::disableForeignKeyConstraints();
-            $table->unsignedBigInteger('Role_id');
-            $table->foreign('Role_id')
-            ->references('id')
-            ->on('roles')
-            ->onDelete('restrict')
-            ->onUpdate('restrict');
 
             $table->string('nom');
+			$table->string('prenom');
             $table->string('phone');
             $table->string('email');
             $table->date('date_naissance');
@@ -32,6 +27,8 @@ class CreatePersonnelsTable extends Migration
             $table->integer('age');
             $table->string('quartier');
             $table->string('adresse');
+			$table->string('role');
+			$table->string('specialisation');
             $table->string('situation_matrimoniale');
             $table->integer('nombre_enfant');
             $table->string('statut');

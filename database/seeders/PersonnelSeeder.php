@@ -21,11 +21,7 @@ class PersonnelSeeder extends Seeder
           //  $personnel->Role()->attach(array_slice($ids,0,rand(1,4)));
        // });
 
-        \App\Models\Role::factory()
-        ->has(\App\Models\Personnel::factory()->count(4))
-        ->count(10)
-        ->create();
-        \App\Models\Personnel::factory()->count(10)->create();
+      
 
         //Relationship between the personal table and the patient table
 

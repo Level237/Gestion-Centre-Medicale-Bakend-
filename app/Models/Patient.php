@@ -15,10 +15,10 @@ class Patient extends Model
 
     protected $fillable=[
         'name',
+		'lastname',
         'email',
         'sexe',
         'date_naissance',
-        'age',
         'lieu_naissance',
         'groupe_sanguin',
         'rhesus',
@@ -39,4 +39,7 @@ class Patient extends Model
     public function Personnel(){
         return $this->belongsToMany(Personnel::class);
     }
+	public function Room(){
+		return $this->hasMany(Patient::class);
+	}
 }
