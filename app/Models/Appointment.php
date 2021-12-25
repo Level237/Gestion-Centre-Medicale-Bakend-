@@ -12,15 +12,16 @@ class Appointment extends Model
     protected $table='Appointments';
 
     protected $fillable=[
-
+         'patient_id',
+		 'personnel_id',
         'type'
     ];
 
     public function patients(){
-        return $this->belongsToMany(Patient::class);
+        return $this->hasMany(Patient::class);
     }
 
     public function Personnel(){
-        return $this->belongsToMany(Personnel::class);
+        return $this->hasMany(Personnel::class);
     }
 }

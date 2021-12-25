@@ -29,7 +29,7 @@ class Patient extends Model
     ];
 
     public function appointments(){
-        return $this->belongsToMany(Appointment::class);
+        return $this->belongsTo(Appointment::class);
     }
 
     public function Antecedents(){
@@ -37,7 +37,7 @@ class Patient extends Model
     }
 
     public function Personnel(){
-        return $this->belongsToMany(Personnel::class);
+        return $this->belongsTo(Personnel::class);
     }
 	public function Rooms(){
 		return $this->belongsToMany(Patient::class);
