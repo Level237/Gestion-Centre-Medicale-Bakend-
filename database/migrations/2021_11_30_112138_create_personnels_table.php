@@ -14,11 +14,8 @@ class CreatePersonnelsTable extends Migration
     public function up()
     {
         Schema::create('personnels', function (Blueprint $table) {
-            $table->id();
-
-            Schema::disableForeignKeyConstraints();
-
-            $table->string('nom');
+            $table->id(); 
+			$table->string('nom');
 			$table->string('prenom');
             $table->string('phone');
             $table->string('email');

@@ -31,7 +31,7 @@ class Personnel extends Model
 
    
     public function Rooms(){
-        return $this->hasMany(Room::class);
+        return $this->belongsToMany(Room::class);
     }
 
     public function Consultations(){

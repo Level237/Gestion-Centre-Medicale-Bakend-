@@ -39,7 +39,7 @@ class Patient extends Model
     public function Personnel(){
         return $this->belongsToMany(Personnel::class);
     }
-	public function Room(){
-		return $this->hasMany(Patient::class);
+	public function Rooms(){
+		return $this->belongsToMany(Patient::class);
 	}
 }

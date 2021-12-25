@@ -14,8 +14,6 @@ class RoomFactory extends Factory
     public function definition()
     {
         return [
-            'personnel_id'=>rand(1,20),
-			'patient_id'=>rand(1,20),
             'name'=>$this->faker->text($maxNbChar=8),
             'type'=>$this->faker->text($maxNbChar=20),
            
