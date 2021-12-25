@@ -33,5 +33,14 @@ class PatientSeeder extends Seeder
              shuffle($ids);
              $patients->appointments()->attach(array_slice($ids,0,rand(1,4)));
          });
+		 
+		  //Relationship between the patient table and the rooms table
+
+        $ids=range(1,10);
+
+        \App\Models\Personnel::factory()->count(10)->create()->each(function ($patient)use ($ids){
+            shuffle($ids);
+            $patient->Rooms()->attach(array_slice($ids,0,rand(1,4)));
+        });
     }
 }

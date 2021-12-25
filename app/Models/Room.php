@@ -14,7 +14,6 @@ class Room extends Model
     protected $table='rooms';
 
     protected $fillable=[
-        'personnel_id',
         'name',
         'type',
         'libelle',
@@ -25,6 +24,11 @@ class Room extends Model
 
 
     public function personnel(){
-        return $this->belongsTo(Personnel::class);
+        return $this->belongsToMany(Personnel::class);
     }
+	
+	public function patient(){
+	   
+	   return $this->belongsToMany(Patient::class);
+	}
 }

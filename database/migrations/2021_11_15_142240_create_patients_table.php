@@ -16,10 +16,10 @@ class CreatePatientsTable extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+			$table->string('lastname');
             $table->string('email')->unique();
             $table->enum('sexe',['M','F']);
             $table->date('date_naissance');
-            $table->integer('age');
             $table->string('lieu_naissance');
             $table->enum('groupe_sanguin', ['O','A','AB','B']);
             $table->string('rhesus');

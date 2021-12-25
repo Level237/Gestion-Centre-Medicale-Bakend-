@@ -13,9 +13,8 @@ class RoomSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\Room::factory()
-        ->has(\App\Models\Personnel::factory()->count(4))
-        ->count(10)
-        ->create();
+        
+		\App\Models\Room::factory()->count(10)->create();
+		
     }
 }

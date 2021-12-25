@@ -15,18 +15,8 @@ class CreateRoomsTable extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-
-            $table->unsignedBigInteger('personnel_id');
-            $table->foreign('personnel_id')
-            ->references('id')
-            ->on('personnels')
-            ->onDelete('restrict')
-            ->onUpdate('restrict');
-            Schema::disableForeignKeyConstraints();
-
-            $table->string('name');
+           $table->string('name');
             $table->string('type');
-            $table->string('libellé')->unique();
             $table->text('description');
             $table->string('statut');
             $table->timestamps();

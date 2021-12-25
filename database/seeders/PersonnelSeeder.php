@@ -21,11 +21,7 @@ class PersonnelSeeder extends Seeder
           //  $personnel->Role()->attach(array_slice($ids,0,rand(1,4)));
        // });
 
-        \App\Models\Role::factory()
-        ->has(\App\Models\Personnel::factory()->count(4))
-        ->count(10)
-        ->create();
-        \App\Models\Personnel::factory()->count(10)->create();
+      
 
         //Relationship between the personal table and the patient table
 
@@ -52,6 +48,15 @@ class PersonnelSeeder extends Seeder
         \App\Models\Personnel::factory()->count(10)->create()->each(function ($personnel)use ($ids){
             shuffle($ids);
             $personnel->Consultations()->attach(array_slice($ids,0,rand(1,4)));
+        });
+		
+		 //Relationship between the personal table and the rooms table
+
+        $ids=range(1,10);
+
+        \App\Models\Personnel::factory()->count(10)->create()->each(function ($personnel)use ($ids){
+            shuffle($ids);
+            $personnel->Rooms()->attach(array_slice($ids,0,rand(1,4)));
         });
     }
 }
