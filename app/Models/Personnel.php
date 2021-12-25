@@ -39,7 +39,7 @@ class Personnel extends Model
     }
 
     public function Appointment(){
-        return $this->belongsToMany(Appointment::class);
+        return $this->belongsTo(Appointment::class);
     }
 
     public function Patients(){
