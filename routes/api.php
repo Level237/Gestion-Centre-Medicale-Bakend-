@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\PersonnelController;
+use App\Http\Controllers\RoomController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::apiResource("/Patient",PatientController::class);
 Route::apiResource("/Personnel",PersonnelController::class);
 Route::get('/doctors','App\Http\Controllers\PersonnelController@listdoctors');
+Route::apiResource("/room",RoomController::class);
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -23,6 +23,7 @@ class PersonnelController extends Controller
 		return Personnel::where("role","docteur")->get();
 	}
 
+
     /**
      * Store a newly created resource in storage.
      *

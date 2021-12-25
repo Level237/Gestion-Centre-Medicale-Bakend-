@@ -15,6 +15,24 @@ class CreateAppointmentsTable extends Migration
     {
         Schema::create('appointments', function (Blueprint $table) {
             $table->id();
+			
+			
+			Schema::disableForeignKeyConstraints();
+			
+			 $table->unsignedBigInteger('personnel_id');
+        $table->foreign('personnel_id')
+            ->references('id')
+            ->on('personnels')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+			
+			 $table->unsignedBigInteger('patient_id');
+        $table->foreign('patient_id')
+            ->references('id')
+            ->on('patients')
+            ->onDelete('restrict')
+            ->onUpdate('restrict');
+			
             $table->enum('type',['Consultation','Vaccination']);
             $table->timestamps();
         });
