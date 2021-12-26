@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Appointment;
+use DB;
 
 class AppointmentController extends Controller
 {
@@ -14,8 +15,13 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        //
-        return Appointment::all();
+       $appointments= DB::table('appointments')
+		->join('patients','patients.id','=','appointments.patient_id')
+		->join('personnels','personnels.id','=','appointments.personnel_id')
+		->select('appointments.id as id','appointments.type as type','patients.name as  patient_name','patients.id as patient_id','personnels.nom as personnel_name','personnels.specialisation','personnels.id as personnel_id')
+		->get();
+		
+        return $appointments;
 
     }
 

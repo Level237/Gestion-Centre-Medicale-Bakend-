@@ -34,6 +34,7 @@ class CreateAppointmentsTable extends Migration
             ->onUpdate('restrict');
 			
             $table->enum('type',['Consultation','Vaccination']);
+			
             $table->timestamps();
         });
     }
