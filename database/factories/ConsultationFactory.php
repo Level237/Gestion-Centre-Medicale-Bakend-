@@ -15,6 +15,9 @@ class ConsultationFactory extends Factory
     public function definition()
     {
         return [
+		     
+			 'personnel_id'=>rand(1,20),
+			 'patient_id'=>rand(1,20),
             'Observation'=> $this->faker->text($maxNbChars=20),
             'resultat'=>$this->faker->text($maxNbChars=200)
         ];

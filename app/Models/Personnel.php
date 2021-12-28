@@ -8,6 +8,7 @@ use App\Models\Role;
 use App\Models\Room;
 use App\Models\Appointment;
 use App\Models\patient;
+use App\Models\Consultation;
 
 class Personnel extends Model
 {
@@ -34,12 +35,11 @@ class Personnel extends Model
         return $this->belongsToMany(Room::class);
     }
 
-    public function Consultations(){
-        return $this->belongsToMany(Consultation::class);
-    }
-
     public function Appointment(){
         return $this->belongsTo(Appointment::class);
+    }
+	public function Consultation(){
+        return $this->belongsTo(Consultation::class);
     }
 
     public function Patients(){

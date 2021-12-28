@@ -11,11 +11,17 @@ class Consultation extends Model
     protected $table="consultations";
 
     protected $fillable=[
+	 'patient_id',
+	'personnel_id',
     'Observation',
     'resultat'
     ];
 
-    public function personnels(){
-        return $this->belongsToMany(Personnel::class);
+     public function patients(){
+        return $this->hasMany(Patient::class);
+    }
+
+    public function Personnel(){
+        return $this->hasMany(Personnel::class);
     }
 }
