@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Consultation;
+use DB;
 
 class ConsultationController extends Controller
 {
@@ -14,8 +15,12 @@ class ConsultationController extends Controller
      */
     public function index()
     {
-        //
-        return Consultation::all();
+        $consultations= DB::table('consultations')
+		->join('patients','patients.id','=','consultations.patient_id')
+		->join('personnels','personnels.id','=','consultations.personnel_id')
+		->select('consultations.id as id','consultations.Observation as observation','consultations.resultat as resultat','patients.name as  patient_name','patients.id as patient_id','personnels.nom as personnel_name','personnels.specialisation','personnels.id as personnel_id')
+		->get();
+		return $consultations;
 
     }
 
