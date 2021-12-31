@@ -12,6 +12,8 @@ class Ordonance extends Model
     protected $table='ordonances';
 
     protected $fillable=[
+	    'patient_id',
+	'personnel_id',
         'type',
         'composition'
     ];

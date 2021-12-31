@@ -9,6 +9,7 @@ use App\Models\Room;
 use App\Models\Appointment;
 use App\Models\patient;
 use App\Models\Consultation;
+use App\Models\Antecedent;
 
 class Personnel extends Model
 {
@@ -41,6 +42,10 @@ class Personnel extends Model
 	public function Consultation(){
         return $this->belongsTo(Consultation::class);
     }
+	public function Antecedent(){
+        return $this->belongsTo(Consultation::class);
+    }
+	
 
     public function Patients(){
         return $this->belongsToMany(Patient::class);

@@ -32,10 +32,9 @@ class Patient extends Model
         return $this->belongsTo(Appointment::class);
     }
 
-    public function Antecedents(){
-        return $this->belongsToMany(Antecedent::class);
+   public function Antecedent(){
+        return $this->belongsTo(Consultation::class);
     }
-
     public function Personnel(){
         return $this->belongsTo(Personnel::class);
     }
