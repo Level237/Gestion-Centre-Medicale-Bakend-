@@ -15,4 +15,12 @@ class Ordonance extends Model
         'type',
         'composition'
     ];
+	
+	public function patients(){
+        return $this->hasMany(Patient::class);
+    }
+
+    public function Personnel(){
+        return $this->hasMany(Personnel::class);
+    }
 }
