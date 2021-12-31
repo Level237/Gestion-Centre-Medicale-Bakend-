@@ -14,6 +14,8 @@ class OrdonanceFactory extends Factory
     public function definition()
     {
         return [
+		     'personnel_id'=>rand(1,20),
+			 'patient_id'=>rand(1,20),
             'type'=>$this->faker->text($maNbChars=20),
             'composition'=>$this->faker->text($maxNbChars=100)
         ];

@@ -24,6 +24,10 @@ class AppointmentController extends Controller
         return $appointments;
 
     }
+	public function getNumberOfAppointment(){
+		
+		 return Appointment::all()->where('created_at','>',now()->subDay(1));
+	}
 
     /**
      * Store a newly created resource in storage.

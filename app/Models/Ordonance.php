@@ -12,7 +12,17 @@ class Ordonance extends Model
     protected $table='ordonances';
 
     protected $fillable=[
+	    'patient_id',
+	'personnel_id',
         'type',
         'composition'
     ];
+	
+	public function patients(){
+        return $this->hasMany(Patient::class);
+    }
+
+    public function Personnel(){
+        return $this->hasMany(Personnel::class);
+    }
 }
