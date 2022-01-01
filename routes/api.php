@@ -26,8 +26,9 @@ Route::get('/doctors','App\Http\Controllers\PersonnelController@listdoctors');
 Route::apiResource("/room",RoomController::class);
 Route::apiResource("/appointment",AppointmentController::class);
 Route::apiResource("/consultation",ConsultationController::class);
-Route::get('/numberOfAppointment','App\Http\Controllers\PersonnelController@getNumberOfAppointment');
+Route::get('/numberOfAppointment','App\Http\Controllers\AppointmentController@getNumberOfAppointment');
 Route::apiResource("/ordonance",OrdonanceController::class);
+Route::get('/numberOfDayAppointment','App\Http\Controllers\AppointmentController@getNumberOfDayAppointment');
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

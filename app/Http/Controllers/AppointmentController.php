@@ -24,9 +24,13 @@ class AppointmentController extends Controller
         return $appointments;
 
     }
+	public function getNumberOfDayAppointment(){
+		return Appointment::all()->where('created_at','>',now()->subDay(0))->count();
+		
+	}
 	public function getNumberOfAppointment(){
 		
-		 return Appointment::all()->where('created_at','>',now()->subDay(1));
+		 return Appointment::all()->count();
 	}
 
     /**
